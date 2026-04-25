@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arolax HTML5 Template">
+
+  <title>Arolax About</title>
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png">
+
+  <!-- All CSS files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/progressbar.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/master-about.css">
+
+</head>
+
+<body class="font-heading-beatricetrial-regular-2">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="container" class="container-preloader">
+      <div class="animation-preloader">
+        <div class="spinner"></div>
+        <div class="txt-loading">
+          <span data-text="A" class="characters">A</span>
+          <span data-text="R" class="characters">R</span>
+          <span data-text="O" class="characters">O</span>
+          <span data-text="L" class="characters">L</span>
+          <span data-text="A" class="characters">A</span>
+          <span data-text="X" class="characters">X</span>
+        </div>
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+  </div>
+
+  <!-- Cursor Animation -->
+  <div class="cursor1"></div>
+  <div class="cursor2"></div>
+
+  <!-- Sroll to top -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+    </svg>
+  </div>
+
+  <!-- Switcher Area Start -->
+  <div class="switcher__area">
+    <div class="switcher__icon">
+      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="switcher__items">
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">mode</p>
+        </div>
+        <div class="switcher__btn mode-type wc-col-2">
+          <button class="active" data-mode="light">light</button>
+          <button data-mode="dark">dark</button>
+        </div>
+      </div>
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">Language Support</p>
+        </div>
+        <div class="switcher__btn lang_dir wc-col-2">
+          <button class="active" data-mode="ltr">LTR</button>
+          <button data-mode="rtl">RTL</button>
+        </div>
+      </div>
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">Layout</p>
+        </div>
+        <div class="switcher__btn layout-type wc-col-2">
+          <button class="active" data-mode="full-width">Full Width</button>
+          <button data-mode="box-layout">Box Layout</button>
+        </div>
+      </div>
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">Cursor</p>
+        </div>
+        <div class="switcher__btn">
+          <select name="cursor-style" id="cursor_style">
+            <option value="1">default</option>
+            <option selected value="2">animated</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Switcher Area End -->
+
+  <!-- offcanvas start  -->
+  <div class="offcanvas-3__area">
+    <div class="offcanvas-3__inner">
+      <div class="offcanvas-3__meta-wrapper">
+        <div class="">
+          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="">
+          <div class="offcanvas-3__meta mb-145 d-none d-md-block">
+            <ul>
+              <li><a href="tel:+2-352698102" class="unnerline"><u>+2-352 698 102</u></a></li>
+              <li><a href="mailto:contact@me.com">contact@me.com</a></li>
+              <li><a href="">27 Division St, <br>
+                  New York, NY 10002, USA</a></li>
+            </ul>
+          </div>
+          <div class="offcanvas-3__social d-none d-md-block">
+            <p class="title">Follow Me</p>
+            <div class="offcanvas-3__social-links">
+              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-dribbble"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas-3__menu-wrapper">
+        <nav class="nav-menu offcanvas-3__menu">
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="service-details.html">service details</a></li>
+            <li><a href="works.html">projects</a></li>
+            <li><a href="work-details.html">project details</a></li>
+            <li><a href="team.html">team</a></li>
+            <li><a href="team-details.html">team details</a></li>
+            <li><a href="career.html">career</a></li>
+            <li><a href="career-details.html">career details</a></li>
+            <li><a href="faq.html">faq</a></li>
+            <li><a href="404.html">404 page</a></li>
+            <li><a href="blog.html">blog</a></li>
+            <li><a href="blog-details.html">blog details</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- offcanvas end  -->
+
+  <!-- search modal start -->
+  <div class="modal fade" id="search-template" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="search-template" aria-hidden="true">
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form action="#" class="form-search">
+            <input type="text" placeholder="Search">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- search modal end -->
+
+  <!-- Header area start -->
+  <header class="header-area">
+    <div class="container large">
+      <div class="header-area__inner">
+        <div class="header__logo">
+          <a href="#">
+            <img class="show-light" src="assets/imgs/logo/logo.png" alt="Site Logo">
+            <img class="show-dark" src="assets/imgs/logo/logo-light.png" alt="Site Logo">
+          </a>
+        </div>
+        <div class="header__nav pos-center">
+          <nav class="main-menu">
+            <ul>
+              <li class="menu-item-has-children">
+                <a href="#">Demos</a>
+                <ul class="dp-menu col-2">
+                  <li><a href="branding-agency.html">Branding Agency</a></li>
+                  <li><a href="web-agency.html">Web Agency</a></li>
+                  <li><a href="seo-agency.html">SEO Agency</a></li>
+                  <li><a href="design-studio.html">Design Agency</a></li>
+                  <li><a href="video-production.html">Video Agency</a></li>
+                  <li><a href="ai-agency.html">AI Agency</a></li>
+                  <li><a href="creative-agency-classic.html">Creative Agency Classic</a></li>
+                  <li><a href="marketing-agency.html">Marketing Agency</a></li>
+                  <li><a href="corporate-agency.html">Corporate Agency</a></li>
+                  <li><a href="startup-agency.html">Startup Agency</a></li>
+                  <li><a href="modern-agency.html">Modern Agency</a></li>
+                  <li><a href="photography-studio.html">Photography Agency</a></li>
+                  <li><a href="creative-agency.html">Creative Agency</a></li>
+                  <li><a href="digital-agency.html">Digital Agency</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">about</a></li>
+              <li class="menu-item-has-children">
+                <a href="#">portfolio</a>
+                <ul class="dp-menu">
+                  <li><a href="portfolio-carousel.html">Portfolio Carousel</a></li>
+                  <li><a href="portfolio-material.html">Portfolio Material</a></li>
+                  <li><a href="portfolio-slicer.html">Portfolio Slicer</a></li>
+                  <li><a href="portfolio-spring.html">Portfolio Spring</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Pages</a>
+                <ul class="dp-menu">
+                  <li class="menu-item-has-children">
+                    <a href="#">service pages</a>
+                    <ul>
+                      <li><a href="services.html">services</a></li>
+                      <li><a href="service-details.html">service details</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#">project pages</a>
+                    <ul>
+                      <li><a href="works.html">project</a></li>
+                      <li><a href="work-details.html">project details</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#">team pages</a>
+                    <ul>
+                      <li><a href="team.html">team</a></li>
+                      <li><a href="team-details.html">team details</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#">career pages</a>
+                    <ul>
+                      <li><a href="career.html">career</a></li>
+                      <li><a href="career-details.html">career details</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="faq.html">faq</a></li>
+                  <li><a href="404.html">404 page</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">blog</a>
+                <ul class="dp-menu">
+                  <li><a href="blog.html">blog</a></li>
+                  <li><a href="blog-details.html">blog details</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__button">
+          <a class="wc-btn wc-btn-primary btn-text-flip" href="contact.html"><span data-text="Get started">Get
+              started</span></a>
+        </div>
+        <div class="header__navicon d-xl-none">
+          <button onclick="showCanvas3()" class="open-offcanvas">
+            <i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header area end -->
+
+  <div class="has-smooth" id="has_smooth"></div>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <div class="body-wrapper body-corporate-agency">
+
+        <!-- overlay switcher close  -->
+        <div class="overlay-switcher-close"></div>
+
+        <main>
+
+          <!-- hero area start  -->
+          <section class="hero-area">
+            <div class="container large">
+              <div class="hero-area-inner">
+                <div class="section-content">
+                  <div class="section-title-wrapper">
+                    <div class="title-wrapper">
+                      <h1 class="section-title large has_fade_anim">Over 10 Years. 100s of Students. One Thing That Never Changes.</h1>
+                    </div>
+                  </div>
+                  <div class="content-last">
+                    <div class="subtitle-wrapper has_fade_anim" data-fade-from="right">
+                      <span class="section-subtitle has-right-line">01. about us</span>
+                    </div>
+                    <div class="text-wrapper">
+                      <p class="text has_fade_anim" data-fade-from="left">The relationship between a student and their tutor is at the heart of everything we do at Concept Tutoring.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <!-- hero area end  -->
+
+          <!-- counter area start  -->
+          <div class="counter-area">
+            <div class="counter-area-inner">
+              <div class="thumb">
+                <img src="assets/imgs/gallery/img-s-27.webp" alt="image">
+              </div>
+              <div class="counter-wrapper-box">
+                <div class="counter-wrapper">
+                  <div class="thumb overflow-hidden">
+                    <img src="assets/imgs/gallery/img-s-28.webp" data-speed="0.9" alt="image">
+                  </div>
+                  <div class="counter-box">
+                    <h2 class="text has_fade_anim">1,000+ Students <br>
+                      Enrolled</h2>
+                    <h2 class="number wc-counter has_fade_anim">1000+</h2>
+                  </div>
+                  <div class="counter-box dark">
+                    <h2 class="text has_fade_anim">10+ Years <br>
+                      of Excellence</h2>
+                    <h2 class="number wc-counter has_fade_anim">10+</h2>
+                  </div>
+                  <div class="thumb overflow-hidden">
+                    <img src="assets/imgs/gallery/img-s-29.webp" data-speed="0.9" alt="image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- counter area end  -->
+
+          <!-- awards area start  -->
+          <section class="awards-area">
+            <div class="container">
+              <div class="awards-area-inner section-spacing">
+                <div class="section-header">
+                  <div class="section-title-wrapper">
+                    <div class="subtitle-wrapper">
+                      <span class="section-subtitle has-left-line">02. Who we are</span>
+                    </div>
+                    <div class="title-wrapper">
+                      <h2 class="section-title has_fade_anim">Concept Tutoring was built on the conviction that children learn best when they feel genuinely understood — not just taught.</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-content">
+                  <div class="text-wrapper">
+                    <p class="text has_fade_anim" data-fade-from="left">Over more than a decade, we have worked with thousands of students across Melbourne's west and north. Every one of them came to us with different needs, different struggles, and a different way of making sense of the world. And every one of them got a tutor who took the time to understand that — not just in the first session, but across every session that followed.
+                    </p>
+                  </div>
+                  <div class="awards-list has_fade_anim">
+                    <ul>
+                      <li>
+                        <div class="meta">
+                          <div class="icon">
+                            <img class="show-light" src="assets/imgs/icon/icon-s-40.webp" alt="icon">
+                            <img class="show-dark" src="assets/imgs/icon/icon-s-40-light.webp" alt="icon">
+                          </div>
+                          <div class="content">
+                            <h3 class="number wc-counter">3</h3>
+                            <p class="text">Locations</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="meta">
+                          <div class="icon">
+                            <img class="show-light" src="assets/imgs/icon/icon-s-41.webp" alt="icon">
+                            <img class="show-dark" src="assets/imgs/icon/icon-s-41-light.webp" alt="icon">
+                          </div>
+                          <div class="content">
+                            <h3 class="number wc-counter">100%</h3>
+                            <p class="text">Satisfaction Guarantee</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="about-thumbs">
+                  <div class="thumb-first">
+                    <img src="assets/imgs/gallery/img-s-3.webp" class="has_fade_anim" data-fade-from="right"
+                      alt="image">
+                  </div>
+                  <div class="thumb-second">
+                    <img src="assets/imgs/gallery/img-s-4.webp" class="has_fade_anim" data-fade-from="left" alt="image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- awards area end  -->
+
+          <!-- about area start  -->
+          <section class="about-area container-hd">
+            <div class="about-area-inner">
+              <div class="thumb">
+                <img src="assets/imgs/gallery/img-s-30.webp" alt="gallery image">
+              </div>
+              <div class="section-content">
+                <div class="bg">
+                  <img src="assets/imgs/gallery/img-s-31.webp" alt="image">
+                </div>
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title has_fade_anim">How We Teach</h2>
+                  </div>
+                </div>
+                <div class="text-wrapper">
+                  <p class="text has_fade_anim" data-fade-from="left">• Every student begins with a free assessment — so we understand exactly where they are before we teach them a single thing.
+                    • We build a personalised learning plan for each child — not a generic program adapted from a template, but a genuine plan built around their strengths, their gaps, and how they learn.
+                    • Our tutors build real relationships with students — asking questions, listening carefully, adapting every session based on what is working and what still needs attention.
+                    • As students grow more comfortable, they open up more — and that honesty makes teaching far more effective than any curriculum alone could achieve.
+                    • We provide regular progress reports so parents always know how their child is developing — academically and in terms of confidence.
+                    • Every program aligns with the Australian Curriculum, so tutoring and school always move in the same direction.
+                  </p>
+                </div>
+                <div class="btn-wrapper has_fade_anim" data-ease="bounce">
+                  <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip"> <span data-text="Learn More">Learn
+                      More</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- about area end  -->
+
+          <!-- testimonial area start  -->
+          <div class="testimonial-area has_fade_anim">
+            <div class="container">
+              <div class="testimonial-area-inner section-spacing">
+                <div class="testimonial-wrapper-box">
+                  <div class="testimonial-wrapper">
+                    <div class="swiper testimonial-slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="testimonial-item">
+                            <div class="content">
+                              <div class="icon">
+                                <img class="quote-icon show-light" src="assets/imgs/icon/quote-5.webp" alt="Quote Icon">
+                                <img class="quote-icon show-dark" src="assets/imgs/icon/quote-5-light.webp"
+                                  alt="Quote Icon">
+                              </div>
+                              <div class="text-wrapper">
+                                <p class="text">When we talk about Concept Tutoring, we do not mean a typical business partner, but rather a team that collaborates with us daily, always there for us when we encounter difficulties and celebrate achievements. We see in Concept our best ally for success!</p>
+                              </div>
+                              <div class="author">
+                                <div class="meta">
+                                  <span class="name">Family from Melbourne, </span>
+                                  <span class="post">Student Parent</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="testimonial-item">
+                            <div class="content">
+                              <div class="icon">
+                                <img class="quote-icon show-light" src="assets/imgs/icon/quote-5.webp" alt="Quote Icon">
+                                <img class="quote-icon show-dark" src="assets/imgs/icon/quote-5-light.webp"
+                                  alt="Quote Icon">
+                              </div>
+                              <div class="text-wrapper">
+                                <p class="text">When we talk about Concept Tutoring, we do not mean a typical business partner, but rather a team that collaborates with us daily, always there for us when we encounter difficulties and celebrate achievements. We see in Concept our best ally for success!</p>
+                              </div>
+                              <div class="author">
+                                <div class="meta">
+                                  <span class="name">Family from Melbourne, </span>
+                                  <span class="post">Student Parent</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="testimonial-item">
+                            <div class="content">
+                              <div class="icon">
+                                <img class="quote-icon show-light" src="assets/imgs/icon/quote-5.webp" alt="Quote Icon">
+                                <img class="quote-icon show-dark" src="assets/imgs/icon/quote-5-light.webp"
+                                  alt="Quote Icon">
+                              </div>
+                              <div class="text-wrapper">
+                                <p class="text">When we talk about Concept Tutoring, we do not mean a typical business partner, but rather a team that collaborates with us daily, always there for us when we encounter difficulties and celebrate achievements. We see in Concept our best ally for success!</p>
+                              </div>
+                              <div class="author">
+                                <div class="meta">
+                                  <span class="name">Family from Melbourne, </span>
+                                  <span class="post">Student Parent</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="testimonial-item">
+                            <div class="content">
+                              <div class="icon">
+                                <img class="quote-icon show-light" src="assets/imgs/icon/quote-5.webp" alt="Quote Icon">
+                                <img class="quote-icon show-dark" src="assets/imgs/icon/quote-5-light.webp"
+                                  alt="Quote Icon">
+                              </div>
+                              <div class="text-wrapper">
+                                <p class="text">When we talk about Concept Tutoring, we do not mean a typical business partner, but rather a team that collaborates with us daily, always there for us when we encounter difficulties and celebrate achievements. We see in Concept our best ally for success!</p>
+                              </div>
+                              <div class="author">
+                                <div class="meta">
+                                  <span class="name">Family from Melbourne, </span>
+                                  <span class="post">Student Parent</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-nav">
+                    <div class="testimonial-button-prev nav-icon">
+                      <img class="show-light" src="assets/imgs/icon/angle-left.webp" alt="icon">
+                      <img class="show-dark" src="assets/imgs/icon/angle-left-light.webp" alt="icon">
+                    </div>
+                    <div class="testimonial-button-next nav-icon">
+                      <img class="show-light" src="assets/imgs/icon/angle-right.webp" alt="icon">
+                      <img class="show-dark" src="assets/imgs/icon/angle-right-light.webp" alt="icon">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- testimonial area end  -->
+
+          <!-- faq area start  -->
+          <section class="faq-area">
+            <div class="container">
+              <div class="faq-area-inner section-spacing-bottom">
+                <div class="section-content">
+                  <div class="thumb">
+                    <img src="assets/imgs/gallery/img-s-85.webp" alt="image">
+                    <a href="https://www.youtube.com/watch?v=AzwC6umvd1s"
+                      class="wc-btn wc-btn-circle video-popup pos-center"><i class="fa-solid fa-play"></i></a>
+                  </div>
+                  <div class="content-last">
+                    <div class="section-title-wrapper">
+                      <div class="title-wrapper">
+                        <h2 class="section-title has_fade_anim">Our Tutors</h2>
+                      </div>
+                    </div>
+                    <div class="accordion-wrapper has_fade_anim">
+                      <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#flush-collapseOne" aria-expanded="false"
+                              aria-controls="flush-collapseOne">Expertise and empathy</button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Every tutor at Concept Tutoring is selected for two things: expertise and empathy. Qualifications matter — but so does the ability to connect with a child, to hear what they are not quite saying, and to turn a moment of confusion into a moment of confidence.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                              aria-controls="flush-collapseTwo">Experience and dedication</button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Our team brings years of teaching experience across every level from early learning through to VCE. They are patient, encouraging, and genuinely invested in the students they work with — because for them, this is not just a job. The relationships they build with students are the reason they do what they do.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- faq area end  -->
+
+          <!-- contact area start  -->
+          <section class="contact-area">
+            <div class="container">
+              <div class="contact-area-inner section-spacing">
+                <div class="shape-1">
+                  <img src="assets/imgs/shape/img-s-73.webp" alt="shape">
+                </div>
+                <div class="section-content">
+                  <div class="section-title-wrapper">
+                    <div class="title-wrapper">
+                      <h2 class="section-title has_fade_anim">Want to Experience the Difference for Yourself?</h2>
+                    </div>
+                  </div>
+                  <div class="btn-wrapper has_fade_anim">
+                    <a href="contact.html" class="wc-btn wc-btn-underline btn-text-flip"> <span
+                        data-text="Book a free assessment">Book a free assessment</span> <img
+                        src="assets/imgs/icon/arrow-right-half-light.webp" alt="icon image"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- contact area end  -->
+
+        </main>
+
+        <!-- footer area start  -->
+        <footer class="footer-area">
+          <div class="container">
+            <div class="footer-area-inner section-spacing-top">
+              <div class="shape-1">
+                <img class="show-light" src="assets/imgs/shape/img-s-33.webp" alt="shape">
+                <img class="show-dark" src="assets/imgs/shape/img-s-33-light.webp" alt="shape">
+              </div>
+              <div class="section-header">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title has_fade_anim"><span>Get started</span> <br>
+                      now</h2>
+                  </div>
+                </div>
+                <div class="text-wrapper">
+                  <p class="text has_fade_anim">If you would like to work with us or
+                    just want to get in touch, we'd love
+                    to hear from you!</p>
+                </div>
+              </div>
+              <div class="footer-cta">
+                <div class="footer-widget-wrapper">
+                  <h2 class="title">Phone</h2>
+                  <ul class="footer-nav-list">
+                    <li>0420 869 924</li>
+                  </ul>
+                </div>
+                <div class="footer-widget-wrapper">
+                  <h2 class="title">Email</h2>
+                  <ul class="footer-nav-list">
+                    <li>info@concept-tutoring.com</li>
+                  </ul>
+                </div>
+                <div class="footer-widget-wrapper newsletter">
+                  <form action="#" class="subscribe-form">
+                    <div class="input-field">
+                      <input type="email" placeholder="Enter your email">
+                      <button type="submit" class="subscribe-btn"><img src="assets/imgs/icon/arrow-light.webp"
+                          alt="icon"></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="copyright-area">
+            <div class="container">
+              <div class="copyright-area-inner">
+                <div class="copyright-text">
+                  <p class="text">© 2022 - 2025 | Alrights reserved <br>
+                    by <a href="https://themeforest.net/user/crowdytheme" target="_blank">crowdyTheme</a></p>
+                </div>
+                <ul class="footer-nav-list">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Career</a></li>
+                  <li><a href="#">Sitemap</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- footer area end  -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- All JS files -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/progressbar.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollSmoother.min.js"></script>
+  <script src="assets/js/ScrollToPlugin.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="assets/js/SplitText.min.js"></script>
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <script src="assets/js/backToTop.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/error-handling.js"></script>
+  <script src="assets/js/offcanvas.js"></script>
+
+  <script>
+
+    // testimonial slider
+    if (('.testimonial-slider').length) {
+      var testimonial_slider = new Swiper(".testimonial-slider", {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 60,
+        speed: 1800,
+        watchSlidesProgress: true,
+        navigation: {
+          prevEl: ".testimonial-button-prev",
+          nextEl: ".testimonial-button-next",
+        },
+      });
+    }
+
+  </script>
+
+</body>
+
+</html>
