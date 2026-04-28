@@ -2660,7 +2660,7 @@ textarea {
   display: block;
   margin: 0 0 0 4px;
   border: none;
-  background-image: url(../img/icons/down_arrow.svg);
+  background-image: url(https://html.themegenix.com/skillgro/assets/img/icons/down_arrow.svg);
   width: 12px;
   height: 8px;
 }
@@ -5778,8 +5778,8 @@ textarea {
   bottom: -5%;
 }
 .about__mask-img-one {
-  -webkit-mask-image: url(../img/others/h5_about_mask_img01.png);
-  mask-image: url(../img/others/h5_about_mask_img01.png);
+  -webkit-mask-image: url(https://html.themegenix.com/skillgro/assets/img/others/h5_about_mask_img01.png);
+  mask-image: url(https://html.themegenix.com/skillgro/assets/img/others/h5_about_mask_img01.png);
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
@@ -5818,8 +5818,8 @@ textarea {
   object-fit: cover;
 }
 .about__mask-img-two {
-  -webkit-mask-image: url(../img/others/h5_about_mask_img02.png);
-  mask-image: url(../img/others/h5_about_mask_img02.png);
+  -webkit-mask-image: url(https://html.themegenix.com/skillgro/assets/img/others/h5_about_mask_img02.png);
+  mask-image: url(https://html.themegenix.com/skillgro/assets/img/others/h5_about_mask_img02.png);
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
@@ -8904,7 +8904,7 @@ textarea {
 .courses__curriculum-wrap .course-item .item-name::before {
   content: "";
   display: block;
-  background-image: url(../img/icons/play.svg);
+  background-image: url(https://html.themegenix.com/skillgro/assets/img/icons/play.svg);
   width: 30px;
   height: 30px;
   flex: 0 0 auto;
@@ -10159,7 +10159,7 @@ textarea {
   position: absolute;
   top: 26px;
   right: 26px;
-  background-image: url(../img/icons/cat_star.svg);
+  background-image: url(https://html.themegenix.com/skillgro/assets/img/icons/cat_star.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 30px;
@@ -10906,8 +10906,8 @@ textarea {
   }
 }
 .testimonial__mask-img {
-  -webkit-mask-image: url(../img/others/h6_testimonial_mask_img.png);
-  mask-image: url(../img/others/h6_testimonial_mask_img.png);
+  -webkit-mask-image: url(https://html.themegenix.com/skillgro/assets/img/others/h6_testimonial_mask_img.png);
+  mask-image: url(https://html.themegenix.com/skillgro/assets/img/others/h6_testimonial_mask_img.png);
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
@@ -11090,7 +11090,7 @@ textarea {
 .testimonial__item-four::before {
   content: "";
   position: absolute;
-  background-image: url(../img/icons/quote.svg);
+  background-image: url(https://html.themegenix.com/skillgro/assets/img/icons/quote.svg);
   width: 205px;
   height: 160px;
   z-index: -1;
@@ -15305,8 +15305,8 @@ textarea {
   font-weight: 500;
 }
 .faq__mask-img {
-  -webkit-mask-image: url(../img/others/h5_faq_mask_img.png);
-  mask-image: url(../img/others/h5_faq_mask_img.png);
+  -webkit-mask-image: url(https://html.themegenix.com/skillgro/assets/img/others/h5_faq_mask_img.png);
+  mask-image: url(https://html.themegenix.com/skillgro/assets/img/others/h5_faq_mask_img.png);
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
@@ -19729,7 +19729,7 @@ blockquote > p {
 .lesson__content .course-item-link .item-name::before {
   content: "";
   display: block;
-  background-image: url(../img/icons/play.svg);
+  background-image: url(https://html.themegenix.com/skillgro/assets/img/icons/play.svg);
   width: 30px;
   height: 30px;
   flex: 0 0 auto;
