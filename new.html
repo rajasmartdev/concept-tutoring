@@ -62,7 +62,8 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, #e8f5f1 0%, #f0f7ff 50%, #fef5e7 100%);
+            /* background: linear-gradient(135deg, #e8f5f1 0%, #f0f7ff 50%, #fef5e7 100%); */
+            background: white;
             position: relative;
             overflow: hidden;
         }
@@ -393,6 +394,9 @@
 
         .program-card-container {
             margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
         }
 
         .program-card {
@@ -565,7 +569,6 @@
             font-size: 28px;
             font-weight: 700;
             margin: 0 auto 20px;
-            border: white 4px solid;
         }
 
         .step-icon {
@@ -678,6 +681,7 @@
             font-size: 16px;
             color: #2c3e50;
             font-weight: 600;
+            align-items: center;
         }
 
         .list-dot {
@@ -1095,27 +1099,6 @@
             padding: 30px;
         }
  
-        .map-container {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #e8f4f8 0%, #d4ebf0 100%);
-            border-radius: 12px;
-            margin-bottom: 20px;
-            position: relative;
-            overflow: hidden;
-        }
- 
-        .map-pin {
-            position: absolute;
-            color: #00a8a8;
-            font-size: 24px;
-        }
- 
-        .pin1 { top: 30%; left: 20%; }
-        .pin2 { top: 50%; left: 35%; }
-        .pin3 { top: 60%; left: 45%; }
-        .pin4 { top: 70%; left: 50%; }
- 
         /* Card 7 - Writing Workshop */
         #card7 {
             grid-area: card7;
@@ -1482,35 +1465,25 @@
         /* Find Us Container */
         .find-us-container {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
+            grid-template-columns: 1.5fr 1.7fr;
+            gap: 20px;
             margin-bottom: 50px;
-            align-items: flex-start;
         }
  
         /* Map Container */
         .map-container {
-            background-color: #f5f8fb;
             border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
  
         .map-placeholder {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #e8f5f1 0%, #d4f0f9 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            min-height: 350px;
+        }
+         .map-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
         }
  
         .location-pin {
@@ -1537,7 +1510,7 @@
             background-color: #ffffff;
             border: 2px solid #e2e8f0;
             border-radius: 16px;
-            padding: 30px;
+            padding: 15px;
             transition: all 0.3s ease;
         }
  
@@ -1590,7 +1563,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 12px;
             font-size: 14px;
             color: #2c3e50;
             font-weight: 600;
@@ -1670,7 +1642,7 @@
             display: grid;
             grid-template-columns: 1fr 1.3fr 1fr;
             gap: 40px;
-            align-items: center;
+            align-items: end;
         }
  
         /* Left Box - Ready to See */
@@ -1770,7 +1742,7 @@
         .contact-value {
             font-size: 15px;
             color: #2c3e50;
-            font-weight: 600;
+            font-weight: 500;
         }
  
         .contact-value a {
@@ -2146,15 +2118,15 @@
                 <!-- Left Content -->
                 <div class="col-lg-6 hero-content">
                     <h1 class="hero-title">
-                        Tutoring for<br>
+                        Tutoring from<br>
                         Prep to <span class="highlight-green">Year 10</span>,<br>
-                        <span class="highlight-yellow">NAPLAN</span> &<br>
-                        Competitive Exams
+                        <span class="highlight-yellow">NAPLAN</span> & Selective<br>
+                        Preparation Exams
                     </h1>
-                    <p class="hero-subtitle">Strong foundations. Smarter progress.</p>
+                    <p class="hero-subtitle">Where Knowledge unfolds</p>
                     <a href="#" class="cta-button">
                         <i class="fas fa-calendar"></i>
-                        BOOK A FREE TRIAL
+                        BOOK A FREE ASSESSMENT
                     </a>
                 </div>
 
@@ -2175,14 +2147,14 @@
                         </div>
                         <div>
                             <div class="feature-title">Small Groups</div>
-                            <div class="feature-subtitle">(Max 1:6)</div>
+                            <div class="feature-subtitle">(Up to 6)</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="feature-item">
                         <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
                         <div>
                             <div class="feature-title">Strong Foundation</div>
@@ -2193,7 +2165,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="feature-item">
                         <div class="feature-icon">
-                            <i class="fas fa-headphones"></i>
+                            <i class="fas fa-laptop"></i>
                         </div>
                         <div>
                             <div class="feature-title">Weekly, In-person</div>
@@ -2231,7 +2203,7 @@
                 <div class="col-md-6">
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
                         </div>
                         <div class="contact-text">0420 869 924</div>
                     </div>
@@ -2259,7 +2231,7 @@
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <h3 class="approach-card-title">Expert Tutors</h3>
-                        <p class="approach-card-text">Selected For Both Qualifications And The Ability To Genuinely Connect With Students - Because Real Learning Starts With Real Trust.</p>
+                        <p class="approach-card-text">Selected for both qualifications and the ability to genuinely connect with students - because real learning starts with real trust.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -2267,8 +2239,8 @@
                         <div class="approach-icon personalised">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="approach-card-title">Personalised Programs</h3>
-                        <p class="approach-card-text">No Two Students Are The Same. Every Child Receives A Learning Plan Built Specifically Around Their Strengths, Gaps, And Goals.</p>
+                        <h3 class="approach-card-title">School Curriculum Programs</h3>
+                        <p class="approach-card-text">Every program is aligned to the Australian Curriculum - so what your child learns in sessions directly supports what they're doing at school.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -2277,7 +2249,7 @@
                             <i class="fas fa-chart-bar"></i>
                         </div>
                         <h3 class="approach-card-title">Measurable Progress</h3>
-                        <p class="approach-card-text">Regular Progress Reports Keep You Informed Every Step Of The Way - So You Always Know Exactly How Your Child Is Developing.</p>
+                        <p class="approach-card-text">Regular progress reports keep you informed every step of the way - so you always know exactly how your child is developing.</p>
                     </div>
                 </div>
             </div>
@@ -2300,16 +2272,16 @@
                     <p class="section-tag">GET TO KNOW US</p>
                     <h2 class="section-title-dark">More Than A Tutoring Centre. A Real Learning Relationship.</h2>
                     
-                    <p class="get-to-know-description">At Concept Tutoring, something rare happens - students actually look forward to coming. Over more than a decade and across thousands of students, we've seen the same pattern: when a child truly trusts their tutor, learning transforms. They open up. They ask questions. They admithen they're confused. And that honesty is where real progress begins.</p>
+                    <p class="get-to-know-description">At Concept Tutoring, something rare happens - students actually look forward to coming. Over more than a decade and across thousands of students, we've seen the same pattern: when a child truly trusts their tutor, learning transforms. They open up. They ask questions. They admit when they're confused. And that honesty is where real progress begins.</p>
 
                     <div class="get-to-know-list">
                         <div class="list-item">
                             <span class="list-dot">●</span>
-                            <span class="list-text">World-class tutors with a genuine gift for connection</span>
+                            <span class="list-text">Tutors with a genuine gift for connection</span>
                         </div>
                         <div class="list-item">
                             <span class="list-dot">●</span>
-                            <span class="list-text">Programs built around your individual child - not a template</span>
+                            <span class="list-text">Programs built around your individual child</span>
                         </div>
                         <div class="list-item">
                             <span class="list-dot">●</span>
@@ -2334,8 +2306,8 @@
         <div class="container">
             <div class="programs-header">
                 <p class="section-tag">OUR PROGRAMS</p>
-                <h2 class="section-title">Explore Our Programs For Every<br>Stage Of Learning</h2>
-                <p class="section-description">In-person sessions tailored to your child - from early learning through to exam<br>preparation and beyond.</p>
+                <h2 class="section-title">Programs for Every Stage of Learning</h2>
+                <p class="section-description">In-person sessions tailored to your child — not a class, not a template, not a one-size program.</p>
             </div>
 
             <!-- Tab Navigation -->
@@ -2346,23 +2318,124 @@
                 <button class="tab-button" data-tab="exam-prep">Exam Prep</button>
             </div>
 
-            <!-- Program Card -->
-            <div class="program-card-container">
-                <div class="program-card">
+            <!-- Program Cards -->
+            <div class="program-card-container" id="all-programs-content">
+                <!-- Literacy & Numeracy -->
+                <div class="program-card" data-category="primary">
                     <div class="program-image">
-                        <img src="https://via.placeholder.com/800x300?text=Tutor+and+Student" alt="Program Image">
+                        <img src="img/liternacy.png" alt="Literacy & Numeracy">
                     </div>
                     <div class="program-details">
                         <div class="program-badge">Primary</div>
                         <div class="program-header-content">
-                            <h3 class="program-title">Literacy & Numeracy - Kinder to Year 9</h3>
+                            <h3 class="program-title">Kinder to Year 9 — Literacy & Numeracy</h3>
                             <a href="#" class="program-expert">Expert Tutor</a>
                         </div>
-                        <p class="program-description">Personalised reading, writing and maths support that builds real foundations - not just short-term fixes.</p>
+                        <p class="program-description">Strong reading, confident writing and solid maths foundations built through personalised, interactive in-person sessions. We meet your child where they are and take them where they need to be. We identify gaps and bridge them so they don’t miss out.</p>
+                        <div class="program-tags">
+                            <span class="program-tag">In-Person</span>
+                            <span class="program-tag">All Year</span>
+                            <span class="program-tag">4 Locations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 10 Mathematics -->
+                <div class="program-card" data-category="secondary">
+                    <div class="program-image">
+                        <img src="img/maths.png" alt="Year 10 Mathematics">
+                    </div>
+                    <div class="program-details">
+                        <div class="program-badge">Secondary</div>
+                        <div class="program-header-content">
+                            <h3 class="program-title">Year 10 Mathematics</h3>
+                            <a href="#" class="program-expert">Expert Tutor</a>
+                        </div>
+                        <p class="program-description">Targeted Year 10 mathematics coaching to build confidence in key topics, sharpen exam skills, and make classroom learning more secure.</p>
                         <div class="program-tags">
                             <span class="program-tag">In-Person</span>
                             <span class="program-tag">All Year</span>
                             <span class="program-tag">3 Locations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NAPLAN Preparation -->
+                <div class="program-card" data-category="exam-prep">
+                    <div class="program-image">
+                        <img src="img/naplan.png" alt="NAPLAN Preparation">
+                    </div>
+                    <div class="program-details">
+                        <div class="program-badge">Exam Prep</div>
+                        <div class="program-header-content">
+                            <h3 class="program-title">NAPLAN Preparation</h3>
+                            <a href="#" class="program-expert">Expert Tutor</a>
+                        </div>
+                        <p class="program-description">Focused preparation for Years 3, 5, 7 and 9. Running from October to February every year, this includes a 15-week curriculum review, weekly exercise practice, over five online practice tests, structured coaching and exam strategies that build real confidence — not just content knowledge.</p>
+                        <div class="program-tags">
+                            <span class="program-tag">In-Person</span>
+                            <span class="program-tag">Oct – Feb</span>
+                            <span class="program-tag">All Locations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School Readiness -->
+                <div class="program-card" data-category="primary">
+                    <div class="program-image">
+                        <img src="img/school-readiness.png" alt="School Readiness">
+                    </div>
+                    <div class="program-details">
+                        <div class="program-badge">Early Learning</div>
+                        <div class="program-header-content">
+                            <h3 class="program-title">School Readiness</h3>
+                            <a href="#" class="program-expert">Expert Tutor</a>
+                        </div>
+                        <p class="program-description">Early literacy, early numeracy and the social confidence to start school ready to thrive. Built for children aged 4–6, with a warm and nurturing approach that makes learning feel like play. It’s a six month program starting in June and ending in December.</p>
+                        <div class="program-tags">
+                            <span class="program-tag">In-Person</span>
+                            <span class="program-tag">June – December</span>
+                            <span class="program-tag">All Locations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem Solving -->
+                <div class="program-card" data-category="primary secondary">
+                    <div class="program-image">
+                        <img src="img/problem-solving.png" alt="Problem Solving">
+                    </div>
+                    <div class="program-details">
+                        <div class="program-badge">Extension</div>
+                        <div class="program-header-content">
+                            <h3 class="program-title">Problem Solving — All Levels</h3>
+                            <a href="#" class="program-expert">Expert Tutor</a>
+                        </div>
+                        <p class="program-description">Learning is designed to trigger critical thinking, logical reasoning and structured analytical skills for students at every year level. Essential for all kids and not just for selective school entry and competitive exam preparation.</p>
+                        <div class="program-tags">
+                            <span class="program-tag">In-Person</span>
+                            <span class="program-tag">All Year</span>
+                            <span class="program-tag">All Locations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Writing Workshop -->
+                <div class="program-card" data-category="secondary">
+                    <div class="program-image">
+                        <img src="img/writing-workshop.png" alt="Writing Workshop">
+                    </div>
+                    <div class="program-details">
+                        <div class="program-badge">Extension</div>
+                        <div class="program-header-content">
+                            <h3 class="program-title">Writing Workshops</h3>
+                            <a href="#" class="program-expert">Expert Tutor</a>
+                        </div>
+                        <p class="program-description">The only specialist program in Melbourne's west that prepares students from Year 6 for the writing demands of secondary school. Essays, structured argument, comprehension and language skills — so students are more confident when writing at school or any competitive exams. Only at Concept Tutoring.</p>
+                        <div class="program-tags">
+                            <span class="program-tag">In-Person</span>
+                            <span class="program-tag">All Year</span>
+                            <span class="program-tag">Truganina</span>
                         </div>
                     </div>
                 </div>
@@ -2392,7 +2465,7 @@
                         <img src="img/icon-1.png" alt="">
                     </div>
                     <h3 class="step-title">Free Assessment</h3>
-                    <p class="step-description">We meet your child, evaluate their level, and identify exactly what they need - no cost, no obligation.</p>
+                    <p class="step-description">We meet your child, evaluate their current level, and identify exactly where they need support. Provides parents with clarity on how to progress their child’s learning.</p>
                 </div>
 
                 <div class="step">
@@ -2400,8 +2473,8 @@
                     <div class="step-icon">
                         <img src="img/icon-2.png" alt="">
                     </div>
-                    <h3 class="step-title">Free Assessment</h3>
-                    <p class="step-description">We meet your child, evaluate their level, and identify exactly what they need - no cost, no obligation.</p>
+                    <h3 class="step-title">Personalised Learning Plan</h3>
+                    <p class="step-description">Every kid learns differently. When needed, we build a tailored program specifically for your child — matching their pace, strengths, and goals. Not a shared template.</p>
                 </div>
 
                 <div class="step">
@@ -2409,8 +2482,8 @@
                     <div class="step-icon">
                         <img src="img/icon-3.png" alt="">
                     </div>
-                    <h3 class="step-title">Free Assessment</h3>
-                    <p class="step-description">We meet your child, evaluate their level, and identify exactly what they need - no cost, no obligation.</p>
+                    <h3 class="step-title">In-Person Sessions</h3>
+                    <p class="step-description">Live, structured sessions of 2–4 hours with an experienced tutor who gets to know your child and adapts every lesson to how they learn.</p>
                 </div>
 
                 <div class="step">
@@ -2418,8 +2491,8 @@
                     <div class="step-icon">
                         <img src="img/icon-4.png" alt="">
                     </div>
-                    <h3 class="step-title">Free Assessment</h3>
-                    <p class="step-description">We meet your child, evaluate their level, and identify exactly what they need - no cost, no obligation.</p>
+                    <h3 class="step-title">Regular Progress Reports</h3>
+                    <p class="step-description">We track every step of your child’s improvement and share clear, regular reports so you always know exactly how they are progressing.</p>
                 </div>
             </div>
         </div>
@@ -2439,8 +2512,8 @@
             <div class="card" id="card1">
                 <div class="card-body">
                     <div class="card-icon icon-clipboard">📋</div>
-                    <h3 class="card-title">Truly Personalised No Two Students Are the Same</h3>
-                    <p class="card-text">Every child receives a learning pain built exclusively around themm. We assess individually, track individually, and adapt as they grow.</p>
+                    <h3 class="card-title">No Two Students Are the Same</h3>
+                    <p class="card-text">Child receives a learning plan built around them. We assess individually, track individually, and adapt as they grow.</p>
                 </div>
             </div>
  
@@ -2471,7 +2544,7 @@
             <div class="card" id="card5">
                 <div class="card-body">
                     <div class="card-icon icon-book">📖</div>
-                    <h3 class="card-title">Australian Curriculum Aligned</h3>
+                    <h3 class="card-title">Victorian Curriculum Aligned</h3>
                     <p class="card-text">Every program reinforces exactly what your child is learning at school — no disconnected content, no wasted effort.</p>
                 </div>
             </div>
@@ -2502,7 +2575,7 @@
         <div class="container">
             <div class="testimonials-header">
                 <p class="section-tag">WHY CONCEPT TUTORING</p>
-                <h2 class="section-title">Real Stories From Melbourne Families</h2>
+                <h2 class="section-title">Real Stories From Our Parents</h2>
             </div>
  
             <div class="testimonials-container">
@@ -2565,34 +2638,7 @@
                 <div class="map-container">
                     <div class="map-placeholder">
                         <!-- Map SVG placeholder with location pins -->
-                        <svg width="100%" height="100%" viewBox="0 0 300 350" style="position: absolute; top: 0; left: 0;">
-                            <!-- Map outline -->
-                            <path d="M20 80 L280 80 L280 320 Q150 340 20 320 Z" fill="#e8f5f1" stroke="#d4f0f9" stroke-width="2"/>
-                            
-                            <!-- Location pins -->
-                            <circle cx="240" cy="90" r="12" fill="#00a8cc" opacity="0.3"/>
-                            <circle cx="240" cy="90" r="8" fill="#00a8cc"/>
-                            
-                            <circle cx="100" cy="120" r="12" fill="#00a8cc" opacity="0.3"/>
-                            <circle cx="100" cy="120" r="8" fill="#00a8cc"/>
-                            
-                            <circle cx="150" cy="180" r="12" fill="#00a8cc" opacity="0.3"/>
-                            <circle cx="150" cy="180" r="8" fill="#00a8cc"/>
-                            
-                            <circle cx="120" cy="250" r="12" fill="#00a8cc" opacity="0.3"/>
-                            <circle cx="120" cy="250" r="8" fill="#00a8cc"/>
-                        </svg>
-                        <div style="position: relative; z-index: 2; text-align: center;">
-                            <div class="location-pin">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div style="margin-top: 10px;">
-                                <div class="location-name">Craigieburn</div>
-                                <div class="location-name">Truganina</div>
-                                <div class="location-name">Manor Lakes</div>
-                                <div class="location-name">Tarneit</div>
-                            </div>
-                        </div>
+                        <img src="img/mapping.png" alt="">
                     </div>
                 </div>
  
@@ -2608,11 +2654,13 @@
                         </div>
                         <p class="location-address">8/203 Palmers Road, Truganina VIC 3029</p>
                         <p class="location-description">Our flagship centre — full program range available.</p>
-                        <div class="location-contact">
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="location-contact">
                             <i class="fas fa-phone"></i>
                             <span>0420 869 924</span>
                         </div>
                         <a href="#" class="get-directions-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
  
                     <!-- Manor Lakes -->
@@ -2625,11 +2673,13 @@
                         </div>
                         <p class="location-address">86 Manor Lakes Blvd, Manor Lakes VIC 3024</p>
                         <p class="location-description">At the heart of one of Melbourne's fastest-growing communities.</p>
-                        <div class="location-contact">
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="location-contact">
                             <i class="fas fa-phone"></i>
                             <span>0420 869 924</span>
                         </div>
                         <a href="#" class="get-directions-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
  
                     <!-- Craigieburn -->
@@ -2642,29 +2692,36 @@
                         </div>
                         <p class="location-address">Home Global Learning — 75-95 Central Park Ave, Craigieburn VIC 3064</p>
                         <p class="location-description">Serving families across Melbourne's northern growth corridor.</p>
-                        <div class="location-contact">
-                            <i class="fas fa-phone"></i>
-                            <span>0420 869 924</span>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="location-contact">
+                                <i class="fas fa-phone"></i>
+                                <span>0420 869 924</span>
+                            </div>
+                            <a href="#" class="get-directions-link">Get Directions <i class="fas fa-arrow-right"></i></a>
                         </div>
-                        <a href="#" class="get-directions-link">Get Directions <i class="fas fa-arrow-right"></i></a>
                     </div>
  
                     <!-- Tarneit -->
                     <div class="location-card">
-                        <div class="location-card-header">
-                            <div class="location-pin-icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                        <div class="location-card-header" style="display: flex; justify-content: space-between;">
+                            <div style="display: flex; align-items: center;">
+                                <div class="location-pin-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3 class="location-title">Tarneit</h3>
                             </div>
-                            <h3 class="location-title">Tarneit</h3>
+                            <div class="coming-soon-badge">Coming Soon</div>
                         </div>
                         <p class="location-address">Coming Soon.</p>
                         <p class="location-description">Expanding to serve more Melbourne families.</p>
-                        <div class="location-contact">
-                            <i class="fas fa-phone"></i>
-                            <span>0420 869 924</span>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="location-contact">
+                                <i class="fas fa-phone"></i>
+                                <span>0420 869 924</span>
+                            </div>
+                            <a href="#" class="get-directions-link">Get Directions <i class="fas fa-arrow-right"></i></a>
                         </div>
-                        <a href="#" class="get-directions-link">Get Directions <i class="fas fa-arrow-right"></i></a>
-                        <div class="coming-soon-badge">Coming Soon</div>
+                        
                     </div>
                 </div>
             </div>
@@ -2680,7 +2737,7 @@
         <div class="container">
             <div class="ask-us-more-header">
                 <p class="section-tag">ASK US MORE</p>
-                <h2 class="ask-us-more-title">Ask Us For More</h2>
+                <h2 class="ask-us-more-title">Take the Next Step for Your Child</h2>
             </div>
  
             <div class="ask-us-more-container">
@@ -2715,7 +2772,7 @@
                     <div class="contact-item">
                         <div class="contact-value">
                             <i class="fas fa-envelope" style="margin-right: 8px;"></i>
-                            <a href="mailto:info@concept-tutoring.com">info@concept-tutoring.com</a>
+                            <a href="mailto:tutoringconcept9@gmail.com">tutoringconcept9@gmail.com</a>
                         </div>
                     </div>
  
@@ -2750,14 +2807,6 @@
                     <p class="footer-about-text">
                         <strong>Expert in-person tutoring for Kinder to Year 10</strong>
                     </p>
-                    <div class="footer-contact">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:0420869924">0420 869 924</a>
-                    </div>
-                    <div class="footer-contact">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@concept-tutoring.com">info@concept-tutoring.com</a>
-                    </div>
                 </div>
  
                 <!-- Column 2: Programs -->
@@ -2768,7 +2817,7 @@
                         <a href="#" class="footer-link">Year 10 Mathematics</a>
                         <a href="#" class="footer-link">NAPLAN Preparation</a>
                         <a href="#" class="footer-link">School Readiness</a>
-                        <a href="#" class="footer-link">Problem Solving</a>
+                        <a href="#" class="footer-link">Selective Exam Preparation Grades 6,7,8</a>
                         <a href="#" class="footer-link">Writing Workshop</a>
                     </div>
                 </div>
@@ -2794,7 +2843,7 @@
                         </div>
                         <div class="footer-contact-item">
                             <strong>Email</strong>
-                            <a href="mailto:info@concept-tutoring.com">info@concept-tutoring.com</a>
+                            <a href="mailto:tutoringconcept9@gmail.com">tutoringconcept9@gmail.com</a>
                         </div>
                     </div>
  
@@ -2817,17 +2866,7 @@
                         </a>
                     </div>
  
-                    <!-- App Download Buttons -->
-                    <div class="footer-app-buttons">
-                        <a href="#" class="app-button">
-                            <i class="fab fa-google-play"></i>
-                            Get It On Google Play
-                        </a>
-                        <a href="#" class="app-button">
-                            <i class="fab fa-apple"></i>
-                            Download On The App Store
-                        </a>
-                    </div>
+                    
                 </div>
             </div>
  
@@ -2862,7 +2901,33 @@
                 });
                 // Add active class to clicked button
                 this.classList.add('active');
+
+                // Get the tab category
+                const tabCategory = this.getAttribute('data-tab');
+
+                // Get all program cards
+                const cards = document.querySelectorAll('.program-card');
+
+                // Show/hide cards based on category
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (tabCategory === 'all-programs') {
+                        card.style.display = 'block';
+                    } else if (cardCategory && cardCategory.includes(tabCategory.replace('-programs', ''))) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
+        });
+
+        // Initialize - show all programs by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const allProgramsButton = document.querySelector('.tab-button[data-tab="all-programs"]');
+            if (allProgramsButton) {
+                allProgramsButton.click();
+            }
         });
     </script>
 
