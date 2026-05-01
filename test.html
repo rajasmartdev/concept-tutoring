@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept Tutoring - Centres</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0E3A6B;
+            --primary-light: #E8F4F8;
+            --accent-orange: #F5A623;
+            --accent-teal: #20A39E;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --border-light: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs-section {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .nav-tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            padding: 10px 24px;
+            border-radius: 25px;
+            border: none;
+            background-color: white;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+
+        .nav-tab.active {
+            background-color: var(--primary-dark);
+            color: white;
+            box-shadow: 0 4px 8px rgba(14, 58, 107, 0.2);
+        }
+
+        .nav-tab:hover:not(.active) {
+            background-color: #f0f0f0;
+        }
+
+        .centre-panel {
+            display: none;
+        }
+
+        .centre-panel.active {
+            display: block;
+        }
+
+        .nav-tab i {
+            font-size: 16px;
+        }
+
+        /* Header Section */
+        .header-section {
+            padding: 60px 20px;
+        }
+
+        .center-title {
+            color: var(--accent-teal);
+            font-size: 13px;    
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .centre-name {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+        }
+
+        .subtitle-text {
+            color: var(--accent-teal);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .description-text {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .contact-info i {
+            color: var(--accent-orange);
+            font-size: 18px;
+            width: 24px;
+        }
+
+        .contact-info.address {
+            color: var(--text-light);
+        }
+
+        .contact-info.address strong {
+            color: var(--text-dark);
+        }
+
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-teal);
+        }
+
+        .hero-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            height: 100%;
+            min-height: 300px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .about-title {
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-orange);
+            border-radius: 2px;
+        }
+
+        .about-text {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+
+        /* Programs Box */
+        .programs-box {
+            border: 2px solid var(--accent-orange);
+            border-radius: 16px;
+            padding: 40px;
+            background-color: #fafafa;
+        }
+
+        .programs-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 30px;
+        }
+
+        .program-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 18px;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        .program-item i {
+            color: var(--accent-orange);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* Getting Started Section */
+        .getting-started-section {
+            padding: 60px 20px;
+        }
+
+        .getting-started-title {
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .getting-started-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-orange);
+            border-radius: 2px;
+        }
+
+        .step-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 50px;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .step-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 25px;
+            background-color: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--accent-teal);
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .step-description {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, #F5A623 0%, #f59a23 100%);
+            border-radius: 12px;
+            padding: 40px;
+            margin: 60px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .cta-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .cta-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .cta-info {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--primary-dark);
+        }
+
+        .cta-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-info-item i {
+            font-size: 16px;
+        }
+
+        .cta-button {
+            background-color: white;
+            color: var(--primary-dark);
+            border: none;
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+        }
+
+        .cta-button:hover {
+            transform: translateX(5px);
+            box-shadow: 0 6px 20px rgba(14, 58, 107, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .centre-name {
+                font-size: 36px;
+            }
+
+            .about-title,
+            .getting-started-title {
+                font-size: 28px;
+            }
+
+            .cta-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-info {
+                justify-content: center;
+            }
+
+            .nav-tabs-container {
+                gap: 10px;
+            }
+
+            .nav-tab {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .centre-name {
+                font-size: 28px;
+            }
+
+            .nav-tab {
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+
+            .programs-box {
+                padding: 25px;
+            }
+
+            .cta-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs-section">
+        <div class="container">
+            <div class="nav-tabs-container">
+                <button class="nav-tab active" data-tab="truganina">
+                    <i class="fas fa-map-pin"></i>
+                    TRUGANINA
+                </button>
+                <button class="nav-tab" data-tab="manor-lakes">
+                    <i class="fas fa-map-pin"></i>
+                    MANOR LAKES
+                </button>
+                <button class="nav-tab" data-tab="craigieburn">
+                    <i class="fas fa-map-pin"></i>
+                    CRAIGIEBURN
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="centre-panel active" id="truganina">
+            <section class="header-section">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="center-title">OUR CENTRES</div>
+                        <h1 class="centre-name">Truganina</h1>
+                        <h3 class="subtitle-text">Concept Tutoring Truganina</h3>
+                        <p class="description-text">
+                            Our flagship centre — personalised in-person tutoring from Kinder to VCE for families across Truganina, Wyndham Vale, Point Cook, Tarneit and surrounding suburbs.
+                        </p>
+
+                        <div class="contact-info address">
+                            <i class="fas fa-map-pin"></i>
+                            <span><strong>8/203 Palmers Road, beside Chaska Restaurant, Truganina VIC 3029</strong></span>
+                        </div>
+
+                        <div class="contact-info">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0420869924">0420 869 924</a>
+                        </div>
+
+                        <div class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@concept-tutoring.com">info@concept-tutoring.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1427504494785-cdffcb8e4b23?w=500&h=400&fit=crop" alt="Tutoring in progress">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h2 class="about-title">About Our Truganina Centre</h2>
+
+                        <div class="about-content">
+                            <p class="about-text">
+                                Our Truganina centre is our flagship location — offering the full range of Concept Tutoring programs in a warm, focused environment built entirely around student learning.
+                            </p>
+
+                            <p class="about-text">
+                                Every student who walks in is greeted by name. Tutors know each student's learning history, their goals, their personality. Over time, students grow genuinely comfortable — comfortable enough to speak openly about what they find difficult, what makes sense, and what they are proud of. That kind of relationship is not something you find everywhere.
+                            </p>
+
+                            <p class="about-text">
+                                Sessions run in small groups ensuring every student receives meaningful individual attention. No child is left to quietly struggle while a tutor focuses on someone else.
+                            </p>
+
+                            <p class="about-text">
+                                Conveniently located for families across Truganina, Wyndham Vale, Hoppers Crossing, Point Cook, Tarneit, Werribee and the wider Wyndham area.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="programs-box">
+                            <h3 class="programs-title">Programs Available At Truganina</h3>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Kinder to Year 8 — Literacy & Numeracy</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Years 9 to VCE — Mathematics (Methods, Further, Specialist)</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>School Readiness Program</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>NAPLAN & ICAS Preparation — Years 3, 5, 7 and 9</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Problem Solving — All Levels</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Selective School Exam Preparation — Grades 6, 7 and 8</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Grade 6 Writing Workshop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="getting-started-section">
+                <h2 class="getting-started-title">Getting Started Is Simple</h2>
+
+                <div class="row mt-5">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4 class="step-title">Book Your Assessment</h4>
+                            <p class="step-description">
+                                Call Mitra on 0420 869 924 or complete the online form to book your child's free assessment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h4 class="step-title">Attend Your Assessment</h4>
+                            <p class="step-description">
+                                Attend your assessment at our Truganina centre. We get to know your child and evaluate exactly what they need.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="step-title">Personalised Plan</h4>
+                            <p class="step-description">
+                                Receive a personalised learning plan and confirm your child's enrolment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="step-title">Learning Begins</h4>
+                            <p class="step-description">
+                                First session booked. Learning — and the relationship — begins.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cta-banner">
+                <div class="cta-content">
+                    <div class="cta-icon">
+                        <i class="fas fa-clipboard"></i>
+                    </div>
+                    <h3 class="cta-title">Book A Free Assessment At Truganina</h3>
+                    <div class="cta-info">
+                        <div class="cta-info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>0420 869 924</span>
+                        </div>
+                        <div class="cta-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@concept-tutoring.com</span>
+                        </div>
+                        <div class="cta-info-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>8/203 Palmers Road, Truganina VIC 3029</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="cta-button">
+                    Book Now
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="centre-panel" id="manor-lakes">
+            <section class="header-section">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="center-title">OUR CENTRES</div>
+                        <h1 class="centre-name">Manor Lakes</h1>
+                        <h3 class="subtitle-text">Concept Tutoring Manor Lakes</h3>
+                        <p class="description-text">
+                            Personalised in-person tutoring for families across Manor Lakes, Wyndham Vale, Hoppers Crossing and surrounding suburbs.
+                        </p>
+
+                        <div class="contact-info address">
+                            <i class="fas fa-map-pin"></i>
+                            <span><strong>Manor Lakes Community Learning Room, 86 Manor Lakes Blvd, Manor Lakes VIC 3024</strong></span>
+                        </div>
+
+                        <div class="contact-info">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0420869924">0420 869 924</a>
+                        </div>
+
+                        <div class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@concept-tutoring.com">info@concept-tutoring.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1427504494785-cdffcb8e4b23?w=500&h=400&fit=crop" alt="Tutoring in progress">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h2 class="about-title">About Our Manor Lakes Centre</h2>
+
+                        <div class="about-content">
+                            <p class="about-text">
+                                Our Manor Lakes centre is located within the Manor Lakes Community Learning Room — bringing Concept Tutoring's personalised approach right into the heart of one of Melbourne's fastest-growing communities.
+                            </p>
+
+                            <p class="about-text">
+                                The same philosophy that defines our Truganina centre is fully present here: tutors who genuinely know their students, programs built around each individual child, and an environment where students feel comfortable enough to be honest about where they are struggling and what they need.
+                            </p>
+
+                            <p class="about-text">
+                                Parents tell us their children do not just tolerate sessions here — they look forward to them. When that happens, learning compounds. Confidence builds on confidence. Progress accelerates.
+                            </p>
+
+                            <p class="about-text">
+                                Serving families across Manor Lakes, Wyndham Vale, Hoppers Crossing, Werribee and surrounding areas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="programs-box">
+                            <h3 class="programs-title">Programs Available At Manor Lakes</h3>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Kinder to Year 8 — Literacy & Numeracy</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>School Readiness Program</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>NAPLAN & ICAS Preparation — Years 3, 5, 7 and 9</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Problem Solving — All Levels</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Selective School Exam Preparation — Grades 6, 7 and 8</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Grade 6 Writing Workshop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="getting-started-section">
+                <h2 class="getting-started-title">Getting Started Is Simple</h2>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4 class="step-title">Book Your Assessment</h4>
+                            <p class="step-description">
+                                Call Mitra on 0420 869 924 or complete the online form to book your child's free assessment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h4 class="step-title">Attend Your Assessment</h4>
+                            <p class="step-description">
+                                Attend your assessment at our Manor Lakes centre. We evaluate your child's needs and start to understand how they learn.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="step-title">Personalised Plan</h4>
+                            <p class="step-description">
+                                Receive a personalised learning plan and confirm enrolment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="step-title">Learning Begins</h4>
+                            <p class="step-description">
+                                First session booked. Learning begins.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cta-banner">
+                <div class="cta-content">
+                    <div class="cta-icon">
+                        <i class="fas fa-clipboard"></i>
+                    </div>
+                    <div>
+                        <h3 class="cta-title">Book A Free Assessment At Manor Lakes</h3>
+                        <div class="cta-info">
+                            <div class="cta-info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>0420 869 924</span>
+                            </div>
+                            <div class="cta-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@concept-tutoring.com</span>
+                            </div>
+                            <div class="cta-info-item">
+                                <i class="fas fa-map-pin"></i>
+                                <span>Manor Lakes Community Learning Room, 86 Manor Lakes Blvd, Manor Lakes VIC 3024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="cta-button">
+                    Book Now
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="centre-panel" id="craigieburn">
+            <section class="header-section">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="center-title">OUR CENTRES</div>
+                        <h1 class="centre-name">Craigieburn</h1>
+                        <h3 class="subtitle-text">Concept Tutoring Craigieburn</h3>
+                        <p class="description-text">
+                            Expert in-person tutoring for students across Craigieburn, Mickleham, Roxburgh Park, Donnybrook and Melbourne's northern growth corridor.
+                        </p>
+
+                        <div class="contact-info address">
+                            <i class="fas fa-map-pin"></i>
+                            <span><strong>Hume Global Learning Centre, 75–95 Central Park Ave, Craigieburn VIC 3064</strong></span>
+                        </div>
+
+                        <div class="contact-info">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0420869924">0420 869 924</a>
+                        </div>
+
+                        <div class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@concept-tutoring.com">info@concept-tutoring.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1427504494785-cdffcb8e4b23?w=500&h=400&fit=crop" alt="Tutoring in progress">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h2 class="about-title">About Our Craigieburn Centre</h2>
+
+                        <div class="about-content">
+                            <p class="about-text">
+                                Located within the Hume Global Learning Centre on Central Park Avenue, our Craigieburn centre brings the full Concept Tutoring experience to Melbourne's north.
+                            </p>
+
+                            <p class="about-text">
+                                Families here get exactly what Truganina and Manor Lakes families have trusted for years: tutors who invest in knowing each student individually, programs personalised to each child's actual needs, and the kind of student-tutor relationship that makes children genuinely comfortable talking about their learning.
+                            </p>
+
+                            <p class="about-text">
+                                When a child feels that comfortable — when they can say "I don't get this yet" without embarrassment, and trust that their tutor will work through it with them — progress follows naturally.
+                            </p>
+
+                            <p class="about-text">
+                                Serving families across Craigieburn, Mickleham, Roxburgh Park, Donnybrook, Kalkallo and the wider Hume area.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="programs-box">
+                            <h3 class="programs-title">Programs Available At Craigieburn</h3>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Kinder to Year 8 — Literacy & Numeracy</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Years 9 to VCE — Mathematics</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>School Readiness Program</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>NAPLAN & ICAS Preparation — Years 3, 5, 7 and 9</span>
+                            </div>
+
+                            <div class="program-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Problem Solving — All Levels</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="getting-started-section">
+                <h2 class="getting-started-title">Getting Started Is Simple</h2>
+
+                <div class="row mt-5">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4 class="step-title">Book Your Assessment</h4>
+                            <p class="step-description">
+                                Call Mitra on 0420 869 924 or complete the online form to book your child's free assessment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h4 class="step-title">Attend Your Assessment</h4>
+                            <p class="step-description">
+                                Attend your assessment at our Craigieburn centre. We evaluate your child and understand their learning needs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="step-title">Personalised Plan</h4>
+                            <p class="step-description">
+                                Receive a personalised learning plan and confirm enrolment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="step-title">Learning Begins</h4>
+                            <p class="step-description">
+                                First session booked. Learning begins.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cta-banner">
+                <div class="cta-content">
+                    <div class="cta-icon">
+                        <i class="fas fa-clipboard"></i>
+                    </div>
+                    <h3 class="cta-title">Book A Free Assessment At Craigieburn</h3>
+                    <div class="cta-info">
+                        <div class="cta-info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>0420 869 924</span>
+                        </div>
+                        <div class="cta-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@concept-tutoring.com</span>
+                        </div>
+                        <div class="cta-info-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Hume Global Learning Centre, 75–95 Central Park Ave, Craigieburn VIC 3064</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="cta-button">
+                    Book Now
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+<!-- Footer spacing -->
+    <div style="height: 40px;"></div>
+
+        <script>
+        const tabs = document.querySelectorAll('.nav-tab');
+        const panels = document.querySelectorAll('.centre-panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+
+                tabs.forEach(button => button.classList.toggle('active', button === tab));
+                panels.forEach(panel => panel.classList.toggle('active', panel.id === target));
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

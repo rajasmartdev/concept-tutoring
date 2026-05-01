@@ -6,575 +6,199 @@
     <title>Book Free Assessment - Concept Tutoring</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-dark: #0E3A6B;
-            --accent-orange: #F5A623;
-            --accent-teal: #20A39E;
-            --accent-purple: #7C3AED;
-            --accent-blue: #3B82F6;
-            --accent-cyan: #06B6D4;
-            --text-dark: #1a1a1a;
-            --text-light: #666;
-            --bg-light: #f8f9fa;
-            --bg-purple: #F3E8FF;
-            --border-light: #e0e0e0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: #ffffff;
-        }
-
-        /* Header Title Section */
-        .header-section {
-            padding: 60px 20px 40px;
-            text-align: center;
-            background-color: #ffffff;
-        }
-
-        .main-title {
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 20px;
-        }
-
-        .subtitle-text {
-            font-size: 15px;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto 50px;
-            line-height: 1.8;
-        }
-
-        /* Contact Methods - Horizontal Layout */
-        .contact-methods-wrapper {
-            max-width: 1200px;
-            margin: 0 auto 60px;
-            padding: 0 20px;
-        }
-
-        .contact-methods {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background-color: #e8eef8;
-            font-size: 22px;
-            flex-shrink: 0;
-            color: var(--accent-teal);
-        }
-
-        .contact-method:nth-child(4) .contact-icon {
-            color: var(--text-dark);
-        }
-
-        .contact-info h4 {
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 5px;
-        }
-
-        .contact-info p {
-            font-size: 14px;
-            color: var(--text-light);
-            margin: 0;
-        }
-
-        .contact-divider {
-            width: 2px;
-            height: 40px;
-            background-color: var(--accent-orange);
-            margin: 0 10px;
-        }
-
-        /* Three Locations Section */
-        .locations-section {
-            padding: 60px 20px;
-            background-color: #ffffff;
-        }
-
-        .section-title {
-            font-size: 38px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .locations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .location-card {
-            background-color: white;
-            border: 1px solid #f0f0f0;
-            border-radius: 16px;
-            padding: 30px;
-            text-align: left;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
-        .location-card:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-            transform: translateY(-5px);
-        }
-
-        .location-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .location-icon-circle {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .location-card:nth-child(1) .location-icon-circle {
-            background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
-        }
-
-        .location-card:nth-child(2) .location-icon-circle {
-            background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
-        }
-
-        .location-card:nth-child(3) .location-icon-circle {
-            background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
-        }
-
-        .location-info h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .location-card:nth-child(1) .location-info h3 {
-            color: #7C3AED;
-        }
-
-        .location-card:nth-child(2) .location-info h3 {
-            color: #3B82F6;
-        }
-
-        .location-card:nth-child(3) .location-info h3 {
-            color: #06B6D4;
-        }
-
-        .location-subtitle {
-            font-size: 13px;
-            color: var(--text-light);
-        }
-
-        .location-address {
-            font-size: 14px;
-            color: var(--text-light);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .view-map-btn {
-            background-color: white;
-            border: 2px solid;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .location-card:nth-child(1) .view-map-btn {
-            color: #7C3AED;
-            border-color: #7C3AED;
-        }
-
-        .location-card:nth-child(2) .view-map-btn {
-            color: #3B82F6;
-            border-color: #3B82F6;
-        }
-
-        .location-card:nth-child(3) .view-map-btn {
-            color: #06B6D4;
-            border-color: #06B6D4;
-        }
-
-        .location-card:nth-child(1) .view-map-btn:hover {
-            background-color: #7C3AED;
-            color: white;
-        }
-
-        .location-card:nth-child(2) .view-map-btn:hover {
-            background-color: #3B82F6;
-            color: white;
-        }
-
-        .location-card:nth-child(3) .view-map-btn:hover {
-            background-color: #06B6D4;
-            color: white;
-        }
-
-        /* Booking Form Section */
-        .booking-section {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #F3E8FF 0%, #f0e8ff 100%);
-            min-height: 100vh;
-        }
-
-        .booking-container {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 40px;
-            align-items: flex-start;
-        }
-
-        /* Left Sidebar */
-        .booking-left {
-            background: linear-gradient(135deg, #F3E8FF 0%, #f0e8ff 100%);
-        }
-
-        .booking-icon {
-            width: 90px;
-            height: 90px;
-            background-color: rgba(124, 58, 237, 0.15);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            margin-bottom: 25px;
-            color: var(--accent-purple);
-        }
-
-        .booking-title {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .booking-description {
-            font-size: 14px;
-            color: var(--text-light);
-            margin-bottom: 40px;
-            line-height: 1.8;
-        }
-
-        .booking-illustration {
-            margin-top: 80px;
-            position: relative;
-        }
-
-        .booking-illustration svg {
-            width: 100%;
-            max-width: 280px;
-            height: auto;
-        }
-
-        .dot-pattern {
-            position: absolute;
-            bottom: 60px;
-            left: -30px;
-            display: grid;
-            grid-template-columns: repeat(3, 8px);
-            gap: 10px;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: rgba(124, 58, 237, 0.2);
-        }
-
-        /* Right Form Section */
-        .booking-right {
-            background-color: white;
-            padding: 45px;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-bottom: 25px;
-        }
-
-        .form-row.full {
-            grid-template-columns: 1fr;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--primary-dark);
-            margin-bottom: 10px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 13px 15px;
-            border: 1px solid #e8e8e8;
-            border-radius: 8px;
-            font-size: 14px;
-            font-family: inherit;
-            transition: all 0.3s ease;
-            background-color: #fafafa;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-purple);
-            background-color: white;
-            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
-        }
-
-        .form-group input::placeholder,
-        .form-group select::placeholder,
-        .form-group textarea::placeholder {
-            color: #bbb;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 130px;
-        }
-
-        .dropdown-hint {
-            font-size: 12px;
-            color: #999;
-            margin-top: 8px;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #F5A623 0%, #f59000 100%);
-            color: var(--primary-dark);
-            border: none;
-            border-bottom: 4px solid var(--primary-dark);
-            padding: 16px 32px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            margin-top: 25px;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 24px rgba(245, 166, 35, 0.3);
-        }
-
-        .submit-btn:active {
-            transform: translateY(-1px);
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .booking-container {
-                grid-template-columns: 1fr;
-            }
-
-            .booking-left {
-                display: none;
-            }
-
-            .locations-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
-        }
-
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 32px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .contact-methods {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            .contact-divider {
-                display: none;
-            }
-
-            .contact-method {
-                width: 100%;
-                min-width: unset;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .booking-right {
-                padding: 30px;
-            }
-
-            .location-card {
-                padding: 25px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .main-title {
-                font-size: 24px;
-            }
-
-            .section-title {
-                font-size: 22px;
-            }
-
-            .booking-right {
-                padding: 20px;
-            }
-
-            .form-group input,
-            .form-group select {
-                font-size: 16px;
-            }
-
-            .locations-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-methods {
-                gap: 15px;
-            }
-
-            .contact-method {
-                gap: 10px;
-            }
-
-            .location-header {
-                gap: 12px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    
-    <!-- Header Section -->
-    <section class="header-section">
-        <h1 class="main-title">Let's Talk About Your Child</h1>
-        <p class="subtitle-text">
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <img src="img/concept_logo.png" alt="Concept Tutoring Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programs">PROGRAMS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pathway">LEARNING PATHWAY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#works">HOW IT WORKS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="">
+            <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">
+                        Tutoring from<br>
+                        Prep to <span class="highlight-green">Year 10</span>,<br>
+                        <span class="highlight-yellow">NAPLAN</span> & Selective<br>
+                        Preparation Exams
+                    </h1>
+                    <p class="hero-subtitle">Where Knowledge unfolds</p>
+                    <a href="#" class="cta-button">
+                        <i class="fas fa-calendar"></i>
+                        BOOK A FREE ASSESSMENT
+                    </a>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-6 hero-image">
+                    <img src="img/hero-img.png" alt="Students Studying">
+                </div>
+            </div>
+        </div>
+        <!-- Features Section -->
+    <div class="container">
+        <div class="features-container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <div class="feature-title">Small Groups</div>
+                            <div class="feature-subtitle">(Up to 6)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <div class="feature-title">Strong Foundation</div>
+                            <div class="feature-subtitle">to Advanced Skills</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div>
+                            <div class="feature-title">Weekly, In-person</div>
+                            <div class="feature-subtitle">& Online Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <div class="feature-title">Regular Assessments</div>
+                            <div class="feature-subtitle">& Progress Tracking</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Footer -->
+    <div class="container" style="margin-top: 30px; margin-bottom: 60px;">
+        <div class="contact-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-item">
+                        <div class="contact-icon" style="padding: 4px 10px 0;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">tutoringconcept9@gmail.com</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">0420 869 924</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+   <!-- Header Section -->
+    <section class="ctn-header-section">
+        <h1 class="ctn-main-title">Let's Talk About Your Child</h1>
+        <p class="ctn-subtitle-text">
             We combine expert teaching, personal relationships, and structured programs to help every student grow - academically and in confidence.
         </p>
     </section>
 
     <!-- Contact Methods -->
-    <div class="contact-methods-wrapper">
-        <div class="contact-methods">
-            <div class="contact-method">
-                <div class="contact-icon">
+    <div class="ctn-contact-wrapper">
+        <div class="ctn-contact-methods">
+            <div class="ctn-contact-method">
+                <div class="ctn-contact-icon">
                     <i class="fas fa-phone"></i>
                 </div>
-                <div class="contact-info">
+                <div class="ctn-contact-info">
                     <h4>Call Mitra</h4>
                     <p>0420 869 924</p>
                 </div>
             </div>
 
-            <div class="contact-divider"></div>
+            <div class="ctn-contact-divider"></div>
 
-            <div class="contact-method">
-                <div class="contact-icon">
+            <div class="ctn-contact-method">
+                <div class="ctn-contact-icon">
                     <i class="fas fa-envelope"></i>
                 </div>
-                <div class="contact-info">
+                <div class="ctn-contact-info">
                     <h4>Email</h4>
                     <p>info@concept-tutoring.com</p>
                 </div>
             </div>
 
-            <div class="contact-divider"></div>
+            <div class="ctn-contact-divider"></div>
 
-            <div class="contact-method">
-                <div class="contact-icon">
+            <div class="ctn-contact-method">
+                <div class="ctn-contact-icon">
                     <i class="fas fa-globe"></i>
                 </div>
-                <div class="contact-info">
+                <div class="ctn-contact-info">
                     <h4>Website</h4>
                     <p>concept-tutoring.com</p>
                 </div>
             </div>
 
-            <div class="contact-divider"></div>
+            <div class="ctn-contact-divider"></div>
 
-            <div class="contact-method">
-                <div class="contact-icon">
+            <div class="ctn-contact-method">
+                <div class="ctn-contact-icon">
                     <i class="fab fa-whatsapp"></i>
                 </div>
-                <div class="contact-info">
+                <div class="ctn-contact-info">
                     <h4>Whatsap</h4>
                     <p>0420 869 924</p>
                 </div>
@@ -583,59 +207,59 @@
     </div>
 
     <!-- Three Locations Section -->
-    <section class="locations-section">
-        <h2 class="section-title">Our Three Locations</h2>
+    <section class="ctn-locations-section">
+        <h2 class="ctn-section-title">Our Three Locations</h2>
 
-        <div class="locations-grid">
+        <div class="ctn-locations-grid">
             <!-- Truganina Card -->
-            <div class="location-card">
-                <div class="location-header">
-                    <div class="location-icon-circle">
-                        <i class="fas fa-map-pin"></i>
+            <div class="ctn-location-card">
+                <div class="ctn-location-header">
+                    <div class="ctn-location-icon">
+                        <img src="img/map-icon.png" alt="Map Icon">
                     </div>
-                    <div class="location-info">
+                    <div class="ctn-location-info">
                         <h3>Truganina</h3>
-                        <p class="location-subtitle"></p>
-                    </div>
-                </div>
-                <p class="location-address">
+                        <p class="ctn-location-subtitle">
                     8/203 Palmers Road, beside Chaska Restaurant, Truganina VIC 3029
                 </p>
-                <button class="view-map-btn">
+                    </div>
+                </div>
+                
+                <button class="ctn-map-btn">
                     <i class="fas fa-map"></i>
                     View on Map
                 </button>
             </div>
 
             <!-- Manor Lakes Card -->
-            <div class="location-card">
-                <div class="location-header">
-                    <div class="location-icon-circle">
-                        <i class="fas fa-map-pin"></i>
+            <div class="ctn-location-card">
+                <div class="ctn-location-header">
+                    <div class="ctn-location-icon">
+                        <img src="img/map-icon.png" alt="Map Icon">
                     </div>
-                    <div class="location-info">
+                    <div class="ctn-location-info">
                         <h3>Manor Lakes</h3>
-                        <p class="location-subtitle">Manor Lakes Community Learning Room, 86 Manor Lakes Blvd, Manor Lakes VIC 3024</p>
+                        <p class="ctn-location-subtitle">Manor Lakes Community Learning Room, 86 Manor Lakes Blvd, Manor Lakes VIC 3024</p>
                     </div>
                 </div>
-                <button class="view-map-btn" style="margin-top: 15px;">
+                <button class="ctn-map-btn">
                     <i class="fas fa-map"></i>
                     View on Map
                 </button>
             </div>
 
             <!-- Craigieburn Card -->
-            <div class="location-card">
-                <div class="location-header">
-                    <div class="location-icon-circle">
-                        <i class="fas fa-map-pin"></i>
+            <div class="ctn-location-card">
+                <div class="ctn-location-header">
+                    <div class="ctn-location-icon">
+                        <img src="img/map-icon.png" alt="Map Icon">
                     </div>
-                    <div class="location-info">
+                    <div class="ctn-location-info">
                         <h3>Craigieburn</h3>
-                        <p class="location-subtitle">Hume Global Learning Centre, 75-95 Central Park Ave, Craigieburn VIC 3064</p>
+                        <p class="ctn-location-subtitle">Hume Global Learning Centre, 75-95 Central Park Ave, Craigieburn VIC 3064</p>
                     </div>
                 </div>
-                <button class="view-map-btn" style="margin-top: 15px;">
+                <button class="ctn-map-btn">
                     <i class="fas fa-map"></i>
                     View on Map
                 </button>
@@ -644,85 +268,43 @@
     </section>
 
     <!-- Booking Form Section -->
-    <section class="booking-section">
-        <div class="booking-container">
+    <section class="ctn-booking-section">
+        <div class="ctn-booking-container">
             <!-- Left Sidebar -->
-            <div class="booking-left">
-                <div class="booking-icon">
+            <div class="ctn-booking-left">
+                <div class="ctn-booking-icon">
                     <i class="fas fa-calendar-check"></i>
                 </div>
-                <h2 class="booking-title">Book My Free Assessment</h2>
-                <p class="booking-description">
+                <h2 class="ctn-booking-title">Book My Free Assessment</h2>
+                <p class="ctn-booking-description">
                     Prefer to call or message directly? Contact Mitra on 0420 869 924 — calls and WhatsApp welcome.
                 </p>
 
-                <div class="booking-illustration">
-                    <svg viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Plant pot -->
-                        <ellipse cx="80" cy="280" rx="50" ry="18" fill="#E9D5FF"/>
-                        <path d="M 30 280 L 35 250 Q 35 235 50 235 L 110 235 Q 125 235 130 250 L 135 280" fill="#F3E8FF" stroke="#E9D5FF" stroke-width="2"/>
-                        
-                        <!-- Plant leaves -->
-                        <ellipse cx="65" cy="215" rx="12" ry="25" fill="#22C55E" transform="rotate(-25 65 215)"/>
-                        <ellipse cx="95" cy="215" rx="12" ry="25" fill="#22C55E" transform="rotate(25 95 215)"/>
-                        <ellipse cx="80" cy="200" rx="10" ry="22" fill="#16A34A"/>
-                        
-                        <!-- Books -->
-                        <rect x="150" y="260" width="40" height="55" fill="#2563EB" rx="3"/>
-                        <rect x="160" y="255" width="40" height="55" fill="#3B82F6" rx="3"/>
-                        <rect x="170" y="250" width="40" height="55" fill="#DC2626" rx="3"/>
-                        
-                        <!-- Book lines -->
-                        <line x1="160" y1="265" x2="195" y2="265" stroke="white" stroke-width="1.5"/>
-                        <line x1="160" y1="275" x2="195" y2="275" stroke="white" stroke-width="1.5"/>
-                        <line x1="160" y1="285" x2="195" y2="285" stroke="white" stroke-width="1.5"/>
-                        
-                        <!-- Pencil holder -->
-                        <rect x="220" y="265" width="28" height="45" fill="#DBEAFE" stroke="#93C5FD" stroke-width="2" rx="2"/>
-                        <line x1="225" y1="270" x2="225" y2="305" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
-                        <line x1="233" y1="270" x2="233" y2="305" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"/>
-                        <line x1="241" y1="270" x2="241" y2="305" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
-                        
-                        <!-- Decorative dots -->
-                        <circle cx="60" cy="120" r="5" fill="#C4B5FD" opacity="0.4"/>
-                        <circle cx="90" cy="140" r="4" fill="#C4B5FD" opacity="0.4"/>
-                        <circle cx="120" cy="125" r="5" fill="#C4B5FD" opacity="0.4"/>
-                        <circle cx="70" cy="160" r="4" fill="#C4B5FD" opacity="0.4"/>
-                        <circle cx="100" cy="175" r="5" fill="#C4B5FD" opacity="0.4"/>
-                    </svg>
+                <div class="ctn-booking-illustration">
+                    <img src="img/cta-bg-icon.png" alt="">
                 </div>
 
-                <div class="dot-pattern">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
+                
             </div>
 
             <!-- Right Form Section -->
-            <div class="booking-right">
+            <div class="ctn-booking-right">
                 <form>
                     <!-- Row 1: Names -->
-                    <div class="form-row">
-                        <div class="form-group">
+                    <div class="ctn-form-row">
+                        <div class="ctn-form-group">
                             <label for="parent-name">Parent / Guardian Name</label>
                             <input type="text" id="parent-name" placeholder="Enter your name">
                         </div>
-                        <div class="form-group">
+                        <div class="ctn-form-group">
                             <label for="child-name">Child's Name</label>
                             <input type="text" id="child-name" placeholder="Enter child's name">
                         </div>
                     </div>
 
                     <!-- Row 2: Year Level & Program -->
-                    <div class="form-row">
-                        <div class="form-group">
+                    <div class="ctn-form-row">
+                        <div class="ctn-form-group">
                             <label for="year-level">Child's Year Level</label>
                             <select id="year-level">
                                 <option value="">Select year level</option>
@@ -742,7 +324,7 @@
                                 <option value="year12">Year 12</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="ctn-form-group">
                             <label for="program">Program of Interest</label>
                             <select id="program">
                                 <option value="">Select program</option>
@@ -759,8 +341,8 @@
                     </div>
 
                     <!-- Row 3: Location & Phone -->
-                    <div class="form-row">
-                        <div class="form-group">
+                    <div class="ctn-form-row">
+                        <div class="ctn-form-group">
                             <label for="location">Preferred Location</label>
                             <select id="location">
                                 <option value="">Select location</option>
@@ -769,32 +351,32 @@
                                 <option value="manor-lakes">Manor Lakes</option>
                                 <option value="craigieburn">Craigieburn</option>
                             </select>
-                            <div class="dropdown-hint">Truganina / Manor Lakes / Craigieburn / Tarneit</div>
+                            <div class="ctn-dropdown-hint">Truganina / Manor Lakes / Craigieburn / Tarneit</div>
                         </div>
-                        <div class="form-group">
+                        <div class="ctn-form-group">
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" placeholder="Enter phone number">
                         </div>
                     </div>
 
                     <!-- Row 4: Email -->
-                    <div class="form-row full">
-                        <div class="form-group">
+                    <div class="ctn-form-row ctn-form-row-full">
+                        <div class="ctn-form-group">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" placeholder="Enter email address">
                         </div>
                     </div>
 
                     <!-- Row 5: Message -->
-                    <div class="form-row full">
-                        <div class="form-group">
+                    <div class="ctn-form-row ctn-form-row-full">
+                        <div class="ctn-form-group">
                             <label for="message">Message or additional information (optional)</label>
                             <textarea id="message" placeholder="Type your message here..."></textarea>
                         </div>
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="submit-btn">
+                    <button type="submit" class="ctn-submit-btn">
                         Book My Free Assessment
                         <i class="fas fa-arrow-right"></i>
                     </button>
@@ -803,6 +385,146 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Column 1: About -->
+                <div class="footer-column-about">
+                    <div class="footer-logo">
+                        <img src="img/concept_logo.png" alt="Concept Tutoring Logo">
+                    </div>
+                    <p class="footer-about-text">
+                        Concept Tutoring has been helping Melbourne families for over a decade. <strong>Expert tutors. Personalised programs. Real results.</strong>
+                    </p>
+                    <p class="footer-about-text">
+                        <strong>Expert in-person tutoring for Kinder to Year 10</strong>
+                    </p>
+                </div>
+ 
+                <!-- Column 2: Programs -->
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Programs</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Literacy & Numeracy (Kinder—Year 9)</a>
+                        <a href="#" class="footer-link">Year 10 Mathematics</a>
+                        <a href="#" class="footer-link">NAPLAN Preparation</a>
+                        <a href="#" class="footer-link">School Readiness</a>
+                        <a href="#" class="footer-link">Selective Exam Preparation Grades 6,7,8</a>
+                        <a href="#" class="footer-link">Writing Workshop</a>
+                    </div>
+                </div>
+ 
+                <!-- Column 3: Locations -->
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Locations</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Truganina</a>
+                        <a href="#" class="footer-link">Manor Lakes</a>
+                        <a href="#" class="footer-link">Craigieburn</a>
+                        <a href="#" class="footer-link">Tarneit</a>
+                    </div>
+                </div>
+ 
+                <!-- Column 4: Connect With Us -->
+                <div class="footer-column-connect">
+                    <h3 class="footer-column-title">Connect With Us</h3>
+                    <div class="footer-contact-items">
+                        <div class="footer-contact-item">
+                            <strong>Phone</strong>
+                            <a href="tel:0420869924">0420 869 924</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <strong>Email</strong>
+                            <a href="mailto:tutoringconcept9@gmail.com">tutoringconcept9@gmail.com</a>
+                        </div>
+                    </div>
+ 
+                    <!-- Social Media Icons -->
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+ 
+                    
+                </div>
+            </div>
+ 
+            <!-- Footer Divider -->
+            <div class="footer-divider"></div>
+ 
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2026 Concept Tutoring. All rights reserved. Australian Curriculum Aligned · 10+ Years · 4 Locations · 1,100+ Students
+                </div>
+                <div class="footer-links-bottom">
+                    <a href="#">Term of Use</a>
+                    <span>|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+
+    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Tab Navigation Script -->
+    <script>
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Get the tab category
+                const tabCategory = this.getAttribute('data-tab');
+
+                // Get all program cards
+                const cards = document.querySelectorAll('.program-card');
+
+                // Show/hide cards based on category
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (tabCategory === 'all-programs') {
+                        card.style.display = 'block';
+                    } else if (cardCategory && cardCategory.includes(tabCategory.replace('-programs', ''))) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Initialize - show all programs by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const allProgramsButton = document.querySelector('.tab-button[data-tab="all-programs"]');
+            if (allProgramsButton) {
+                allProgramsButton.click();
+            }
+        });
+    </script>
+
+
+
 </body>
 </html>

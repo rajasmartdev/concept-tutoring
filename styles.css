@@ -2065,69 +2065,68 @@
                 justify-content: center;
             }
         }
-
          /* ===== SECTION 1: OUR STORY ===== */
-        .our-story-section {
+        .abt-story-section {
             padding: 80px 20px;
             background-color: #ffffff;
         }
- 
-        .story-container {
-            max-width: 1200px;
+
+        .abt-story-container {
+            max-width: 1250px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
         }
- 
-        .story-label {
-            color: var(--accent-teal);
+
+        .abt-story-label {
+            color: #20A39E;
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 20px;
         }
- 
-        .story-title {
+
+        .abt-story-title {
             font-size: 42px;
             font-weight: 700;
-            color: var(--primary-dark);
+            color: #0E3A6B;
             margin-bottom: 30px;
             line-height: 1.2;
         }
- 
-        .story-text {
+
+        .abt-story-text {
             font-size: 15px;
-            color: var(--text-light);
+            color: #666;
             line-height: 1.9;
             margin-bottom: 20px;
         }
- 
-        .story-image {
+
+        .abt-story-image {
             border-radius: 24px;
             overflow: hidden;
             box-shadow: 0 20px 50px rgba(0,0,0,0.1);
             height: 100%;
             min-height: 400px;
         }
- 
-        .story-image img {
+
+        .abt-story-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
- 
+
         /* ===== SECTION 2: HOW WE TEACH ===== */
-        .how-we-teach-section {
-            padding: 100px 20px;
+        .abt-teach-section {
+            padding: 50px 20px;
             background: linear-gradient(135deg, #D5F7F6 0%, #E0FAFE 100%);
             text-align: center;
         }
- 
-        .teach-label {
-            color: var(--accent-teal);
+
+        .abt-teach-label {
+            color: #20A39E;
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 2px;
@@ -2135,61 +2134,63 @@
             margin-bottom: 15px;
             display: inline-block;
         }
- 
-        .teach-title {
+
+        .abt-teach-title {
             font-size: 42px;
             font-weight: 700;
-            color: var(--primary-dark);
+            color: #0E3A6B;
             margin-bottom: 60px;
             line-height: 1.2;
         }
- 
-        .teach-grid {
+
+        .abt-teach-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
+            gap: 20px;
+            max-width: 1250px;
             margin: 0 auto;
         }
- 
-        .teach-card {
+
+        .abt-teach-card {
             background-color: white;
             border-radius: 16px;
             padding: 40px 30px;
             text-align: center;
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            display: flex;
         }
- 
-        .teach-card:hover {
+
+        .abt-teach-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 24px rgba(0,0,0,0.1);
         }
- 
-        .teach-icon {
+
+        .abt-teach-icon {
             width: 70px;
             height: 70px;
-            margin: 0 auto 25px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 40px;
-            color: var(--accent-orange);
+            color: #F5A623;
         }
- 
-        .teach-card-text {
+
+        .abt-teach-card-text {
             font-size: 15px;
-            color: var(--text-light);
+            color: #666;
             line-height: 1.8;
+            text-align: left;
+            margin-left: 20px;
         }
- 
+
         /* ===== SECTION 3: OUR TUTORS ===== */
-        .our-tutors-section {
-            padding: 80px 20px;
+        .abt-tutors-section {
+            padding: 50px 20px;
             background-color: #ffffff;
         }
- 
-        .tutors-container {
+
+        .abt-tutors-container {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
@@ -2197,95 +2198,95 @@
             gap: 60px;
             align-items: stretch;
         }
- 
-        .tutors-image {
+
+        .abt-tutors-image {
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 50px rgba(0,0,0,0.1);
             height: 100%;
             min-height: 500px;
         }
- 
-        .tutors-image img {
+
+        .abt-tutors-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
- 
-        .tutors-content {
+
+        .abt-tutors-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
- 
-        .tutors-label {
-            color: var(--accent-teal);
+
+        .abt-tutors-label {
+            color: #20A39E;
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 20px;
         }
- 
-        .tutors-title {
+
+        .abt-tutors-title {
             font-size: 42px;
             font-weight: 700;
-            color: var(--primary-dark);
+            color: #0E3A6B;
             margin-bottom: 30px;
             line-height: 1.2;
         }
- 
-        .tutors-text {
+
+        .abt-tutors-text {
             font-size: 15px;
-            color: var(--text-light);
+            color: #666;
             line-height: 1.9;
             margin-bottom: 20px;
         }
- 
-        .stats-container {
+
+        .abt-stats-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             margin-top: 40px;
             padding: 30px;
-            background-color: var(--bg-salmon);
+            background-color: #FF7A5C;
             border-radius: 12px;
         }
- 
-        .stat-box {
+
+        .abt-stat-box {
             background-color: white;
             padding: 25px 20px;
             border-radius: 12px;
             text-align: center;
         }
- 
-        .stat-icon {
+
+        .abt-stat-icon {
             font-size: 32px;
-            color: var(--accent-orange);
+            color: #F5A623;
             margin-bottom: 15px;
         }
- 
-        .stat-number {
+
+        .abt-stat-number {
             font-size: 18px;
             font-weight: 700;
-            color: var(--primary-dark);
+            color: #0E3A6B;
             margin-bottom: 8px;
         }
- 
-        .stat-label {
+
+        .abt-stat-label {
             font-size: 13px;
-            color: var(--text-light);
+            color: #666;
             line-height: 1.4;
         }
- 
+
         /* CTA Section */
-        .cta-final-section {
+        .abt-cta-section {
             background-color: #ffffff;
             padding: 60px 20px;
             border-top: 1px solid #f0f0f0;
         }
- 
-        .cta-final-container {
+
+        .abt-cta-container {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -2294,16 +2295,16 @@
             gap: 40px;
             flex-wrap: wrap;
         }
- 
-        .cta-content {
+
+        .abt-cta-content {
             flex: 1;
             min-width: 300px;
         }
- 
-        .cta-icon-circle {
+
+        .abt-cta-icon-circle {
             width: 70px;
             height: 70px;
-            background-color: var(--primary-dark);
+            background-color: #0E3A6B;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -2312,44 +2313,44 @@
             color: white;
             margin-bottom: 20px;
         }
- 
-        .cta-title {
+
+        .abt-cta-title {
             font-size: 32px;
             font-weight: 700;
-            color: var(--primary-dark);
+            color: #0E3A6B;
             margin-bottom: 15px;
         }
- 
-        .cta-description {
+
+        .abt-cta-description {
             font-size: 15px;
-            color: var(--text-light);
+            color: #666;
             line-height: 1.8;
             margin-bottom: 25px;
         }
- 
-        .cta-contacts {
+
+        .abt-cta-contacts {
             display: flex;
             gap: 40px;
             flex-wrap: wrap;
             align-items: center;
         }
- 
-        .contact-item {
+
+        .abt-contact-item {
             display: flex;
             align-items: center;
             gap: 10px;
             font-size: 14px;
-            color: var(--text-light);
+            color: #666;
         }
- 
-        .contact-item i {
+
+        .abt-contact-item i {
             font-size: 18px;
-            color: var(--accent-teal);
+            color: #20A39E;
         }
- 
-        .cta-button {
-            background-color: var(--accent-orange);
-            color: var(--primary-dark);
+
+        .abt-cta-button {
+            background-color: #F5A623;
+            color: #0E3A6B;
             border: none;
             padding: 14px 32px;
             border-radius: 25px;
@@ -2362,93 +2363,562 @@
             gap: 10px;
             white-space: nowrap;
         }
- 
-        .cta-button:hover {
+
+        .abt-cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(245, 166, 35, 0.3);
         }
- 
+
         /* Responsive */
         @media (max-width: 992px) {
-            .story-container,
-            .tutors-container {
+            .abt-story-container,
+            .abt-tutors-container {
                 grid-template-columns: 1fr;
             }
- 
-            .teach-grid {
+
+            .abt-teach-grid {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
- 
-            .stats-container {
+
+            .abt-stats-container {
                 grid-template-columns: repeat(2, 1fr);
             }
- 
-            .story-title,
-            .teach-title,
-            .tutors-title,
-            .cta-title {
+
+            .abt-story-title,
+            .abt-teach-title,
+            .abt-tutors-title,
+            .abt-cta-title {
                 font-size: 32px;
             }
         }
- 
+
         @media (max-width: 768px) {
-            .our-story-section,
-            .our-tutors-section {
+            .abt-story-section,
+            .abt-tutors-section {
                 padding: 60px 20px;
             }
- 
-            .how-we-teach-section {
+
+            .abt-teach-section {
                 padding: 80px 20px;
             }
- 
-            .story-title,
-            .teach-title,
-            .tutors-title {
+
+            .abt-story-title,
+            .abt-teach-title,
+            .abt-tutors-title {
                 font-size: 28px;
             }
- 
-            .cta-final-container {
+
+            .abt-cta-container {
                 flex-direction: column;
                 align-items: flex-start;
             }
- 
-            .cta-contacts {
+
+            .abt-cta-contacts {
                 flex-direction: column;
                 gap: 15px;
                 align-items: flex-start;
             }
- 
-            .stats-container {
+
+            .abt-stats-container {
                 grid-template-columns: repeat(2, 1fr);
             }
- 
-            .teach-card {
+
+            .abt-teach-card {
                 padding: 30px 20px;
             }
         }
- 
+
         @media (max-width: 576px) {
-            .story-title,
-            .teach-title,
-            .tutors-title,
-            .cta-title {
+            .abt-story-title,
+            .abt-teach-title,
+            .abt-tutors-title,
+            .abt-cta-title {
                 font-size: 24px;
             }
- 
-            .stats-container {
+
+            .abt-stats-container {
                 grid-template-columns: 1fr;
             }
- 
-            .teach-grid {
+
+            .abt-teach-grid {
                 grid-template-columns: 1fr;
             }
- 
-            .cta-contacts {
+
+            .abt-cta-contacts {
                 flex-direction: column;
             }
- 
-            .cta-button {
+
+            .abt-cta-button {
                 width: 100%;
                 justify-content: center;
+            }
+        }
+
+        /* Header Title Section */
+        .ctn-header-section {
+            padding: 60px 20px 40px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .ctn-main-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #0E3A6B;
+            margin-bottom: 20px;
+        }
+
+        .ctn-subtitle-text {
+            font-size: 15px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+
+        /* Contact Methods - Horizontal Layout */
+        .ctn-contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .ctn-contact-methods {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .ctn-contact-method {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .ctn-contact-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #e8eef8;
+            font-size: 22px;
+            flex-shrink: 0;
+            color: #20A39E;
+        }
+
+        .ctn-contact-method:nth-child(4) .ctn-contact-icon {
+            color: #1a1a1a;
+        }
+
+        .ctn-contact-info h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0E3A6B;
+            margin-bottom: 5px;
+        }
+
+        .ctn-contact-info p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        .ctn-contact-divider {
+            width: 2px;
+            height: 40px;
+            background-color: #F5A623;
+            margin: 0 10px;
+        }
+
+        /* Three Locations Section */
+        .ctn-locations-section {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .ctn-section-title {
+            font-size: 38px;
+            font-weight: 700;
+            color: #0E3A6B;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .ctn-locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ctn-location-card {
+            background-color: white;
+            border: 1px solid #f0f0f0;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: left;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .ctn-location-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .ctn-location-header {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .ctn-location-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .ctn-location-card:nth-child(1) .ctn-location-icon {
+            background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+        }
+
+        .ctn-location-card:nth-child(2) .ctn-location-icon {
+            background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+        }
+
+        .ctn-location-card:nth-child(3) .ctn-location-icon {
+            background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
+        }
+
+        .ctn-location-info h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .ctn-location-card:nth-child(1) .ctn-location-info h3 {
+            color: #7C3AED;
+        }
+
+        .ctn-location-card:nth-child(2) .ctn-location-info h3 {
+            color: #3B82F6;
+        }
+
+        .ctn-location-card:nth-child(3) .ctn-location-info h3 {
+            color: #06B6D4;
+        }
+
+        .ctn-location-subtitle {
+            font-size: 17px;
+            color: #666;
+        }
+
+        .ctn-location-address {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .ctn-map-btn {
+            background-color: white;
+            border: 2px solid;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ctn-location-card:nth-child(1) .ctn-map-btn {
+            color: #7C3AED;
+            border-color: #7C3AED;
+        }
+
+        .ctn-location-card:nth-child(2) .ctn-map-btn {
+            color: #3B82F6;
+            border-color: #3B82F6;
+        }
+
+        .ctn-location-card:nth-child(3) .ctn-map-btn {
+            color: #06B6D4;
+            border-color: #06B6D4;
+        }
+
+        .ctn-location-card:nth-child(1) .ctn-map-btn:hover {
+            background-color: #7C3AED;
+            color: white;
+        }
+
+        .ctn-location-card:nth-child(2) .ctn-map-btn:hover {
+            background-color: #3B82F6;
+            color: white;
+        }
+
+        .ctn-location-card:nth-child(3) .ctn-map-btn:hover {
+            background-color: #06B6D4;
+            color: white;
+        }
+
+        /* Booking Form Section */
+        .ctn-booking-section {
+            padding: 30px 20px;
+            min-height: 100vh;
+        }
+
+        .ctn-booking-container {
+            max-width: 1350px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+            align-items: flex-start;
+            background: linear-gradient(135deg, #F3E8FF 0%, #f0e8ff 100%);
+            padding: 40px;
+            border-radius: 16px;
+        }
+
+        /* Left Sidebar */
+        .ctn-booking-left {
+            background: linear-gradient(135deg, #F3E8FF 0%, #f0e8ff 100%);
+            align-self: center;
+        }
+
+        .ctn-booking-icon {
+            width: 90px;
+            height: 90px;
+            background-color: rgba(124, 58, 237, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin-bottom: 25px;
+            color: #7C3AED;
+        }
+
+        .ctn-booking-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0E3A6B;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .ctn-booking-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .ctn-booking-illustration {
+            margin-top: 150px;
+        }
+        .ctn-booking-illustration  img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+
+        /* Right Form Section */
+        .ctn-booking-right {
+            background-color: white;
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        }
+
+        .ctn-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .ctn-form-row-full {
+            grid-template-columns: 1fr;
+        }
+
+        .ctn-form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ctn-form-group label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #0E3A6B;
+            margin-bottom: 10px;
+        }
+
+        .ctn-form-group input,
+        .ctn-form-group select,
+        .ctn-form-group textarea {
+            padding: 13px 15px;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        .ctn-form-group input:focus,
+        .ctn-form-group select:focus,
+        .ctn-form-group textarea:focus {
+            outline: none;
+            border-color: #7C3AED;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
+        }
+
+        .ctn-form-group input::placeholder,
+        .ctn-form-group select::placeholder,
+        .ctn-form-group textarea::placeholder {
+            color: #bbb;
+        }
+
+        .ctn-form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .ctn-dropdown-hint {
+            font-size: 12px;
+            color: #999;
+            margin-top: 8px;
+        }
+
+        .ctn-submit-btn {
+            background: linear-gradient(135deg, #F5A623 0%, #f59000 100%);
+            color: #0E3A6B;
+            border: none;
+            border-bottom: 4px solid #0E3A6B;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .ctn-submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(245, 166, 35, 0.3);
+        }
+
+        .ctn-submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .ctn-booking-container {
+                grid-template-columns: 1fr;
+            }
+
+            .ctn-booking-left {
+                display: none;
+            }
+
+            .ctn-locations-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ctn-main-title {
+                font-size: 32px;
+            }
+
+            .ctn-section-title {
+                font-size: 28px;
+            }
+
+            .ctn-contact-methods {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .ctn-contact-divider {
+                display: none;
+            }
+
+            .ctn-contact-method {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .ctn-form-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .ctn-booking-right {
+                padding: 30px;
+            }
+
+            .ctn-location-card {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .ctn-main-title {
+                font-size: 24px;
+            }
+
+            .ctn-section-title {
+                font-size: 22px;
+            }
+
+            .ctn-booking-right {
+                padding: 20px;
+            }
+
+            .ctn-form-group input,
+            .ctn-form-group select {
+                font-size: 16px;
+            }
+
+            .ctn-locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ctn-contact-methods {
+                gap: 15px;
+            }
+
+            .ctn-contact-method {
+                gap: 10px;
+            }
+
+            .ctn-location-header {
+                gap: 12px;
             }
         }
