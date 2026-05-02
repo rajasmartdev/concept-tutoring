@@ -2458,7 +2458,6 @@
         .ctn-header-section {
             padding: 60px 20px 40px;
             text-align: center;
-            background-color: #ffffff;
         }
 
         .ctn-main-title {
@@ -3200,6 +3199,7 @@
         .pgr-cta-content {
             flex: 1;
             min-width: 300px;
+            display: contents;
         }
 
         .pgr-cta-icon {
