@@ -151,6 +151,25 @@
             height: auto;
         }
 
+        .hero-banner-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            color: #1e3a5f;
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            z-index: 3;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
         /* Features Section */
         .features-container {
             background: white;
@@ -279,13 +298,14 @@
         }
 
         .approach-card {
-            background: #f5f8fb;
+            background: #ffffff;
             border-radius: 12px;
             padding: 35px 25px;
             text-align: left;
             transition: all 0.3s ease;
             height: 100%;
             margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
         }
 
         .approach-card:hover {
@@ -2251,23 +2271,26 @@
             padding: 30px;
             background-color: #FF7A5C;
             border-radius: 12px;
+            position: relative;
+            left: -154px;
+            width: 125%;
         }
 
         .abt-stat-box {
             background-color: white;
-            padding: 25px 20px;
+            padding: 25px 10px;
             border-radius: 12px;
             text-align: center;
         }
 
         .abt-stat-icon {
-            font-size: 32px;
+            font-size: 25px;
             color: #F5A623;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
 
         .abt-stat-number {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: #0E3A6B;
             margin-bottom: 8px;
@@ -2287,7 +2310,7 @@
         }
 
         .abt-cta-container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -2299,17 +2322,19 @@
         .abt-cta-content {
             flex: 1;
             min-width: 300px;
+            display: flex;
+            gap: 20px;
         }
 
         .abt-cta-icon-circle {
-            width: 70px;
-            height: 70px;
+            width: 85px;
+            height: 55px;
             background-color: #0E3A6B;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 36px;
+            font-size: 32px;
             color: white;
             margin-bottom: 20px;
         }
@@ -3318,3 +3343,21 @@
                 font-size: 22px;
             }
         }
+
+        .wp-button{
+	margin-top:14px;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:35px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
