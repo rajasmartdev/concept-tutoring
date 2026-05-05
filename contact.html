@@ -28,7 +28,7 @@
                         <a class="nav-link" href="about-us.html">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="programs.html">PROGRAMS</a>
+                        <a class="nav-link" href="locations.html">OUR LOCATIONS</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#pathway">LEARNING PATHWAY</a>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="ctn-contact-info">
                     <h4>Call Mitra</h4>
-                    <p>0420 869 924</p>
+                    <a href="tel:0420869924">0420 869 924</a>
                 </div>
             </div>
 
@@ -84,7 +84,7 @@
                 </div>
                 <div class="ctn-contact-info">
                     <h4>Email</h4>
-                    <p>tutoringconcept9@gmail.com</p>
+                    <a href="mailto:tutoringconcept9@gmail.com">tutoringconcept9@gmail.com</a>
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
                 </div>
                 <div class="ctn-contact-info">
                     <h4>Website</h4>
-                    <p>concept-tutoring.com</p>
+                    <a href="https://concept-tutoring.com">concept-tutoring.com</a>
                 </div>
             </div>
 
@@ -108,7 +108,7 @@
                 </div>
                 <div class="ctn-contact-info">
                     <h4>Whatsap</h4>
-                    <p>0420 869 924</p>
+                    <a href="https://wa.me/61420869924">0420 869 924</a>
                 </div>
             </div>
         </div>
@@ -133,10 +133,10 @@
                     </div>
                 </div>
                 
-                <button class="ctn-map-btn">
+                <a href="https://www.google.com/maps?q=8/203+Palmers+Road,+Truganina+VIC+3029" target="_blank" class="ctn-map-btn">
                     <i class="fas fa-map"></i>
                     View on Map
-                </button>
+                </a>
             </div>
 
             <!-- Manor Lakes Card -->
@@ -150,10 +150,10 @@
                         <p class="ctn-location-subtitle">Manor Lakes Community Learning Room, 86 Manor Lakes Blvd, Manor Lakes VIC 3024</p>
                     </div>
                 </div>
-                <button class="ctn-map-btn">
+                <a href="https://www.google.com/maps?q=86+Manor+Lakes+Blvd,+Manor+Lakes+VIC+3024" target="_blank" class="ctn-map-btn">
                     <i class="fas fa-map"></i>
                     View on Map
-                </button>
+                </a>
             </div>
 
             <!-- Craigieburn Card -->
@@ -167,10 +167,10 @@
                         <p class="ctn-location-subtitle">Hume Global Learning Centre, 75-95 Central Park Ave, Craigieburn VIC 3064</p>
                     </div>
                 </div>
-                <button class="ctn-map-btn">
+                <a href="https://www.google.com/maps?q=75-95+Central+Park+Ave,+Craigieburn+VIC+3064" target="_blank" class="ctn-map-btn">
                     <i class="fas fa-map"></i>
                     View on Map
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -391,6 +391,25 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Form Submission Script -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            let body = 'New Assessment Booking Request:\n\n';
+            
+            for (let [key, value] of formData.entries()) {
+                body += `${key}: ${value}\n`;
+            }
+            
+            const subject = 'Free Assessment Booking Request';
+            const mailtoLink = `mailto:tutoringconcept9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.location.href = mailtoLink;
+        });
+    </script>
 
     <!-- Tab Navigation Script -->
     <script>
