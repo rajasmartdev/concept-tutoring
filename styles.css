@@ -112,6 +112,18 @@
             margin-bottom: 20px;
         }
 
+        @media (min-width: 1200px) and (max-width: 1399px){
+            .hero-title {
+                font-size: 48px;
+            }
+        }
+
+         @media (max-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+        }
+
         .hero-title .highlight-green {
             color: #52c77e;
         }
@@ -216,6 +228,28 @@
             width: 60px;
             height: auto;
             background: linear-gradient(135deg, #e8f5f1 0%, #f0f7ff 50%, #fef5e7 100%);
+        }
+
+        @media (min-width: 1200px) and (max-width: 1399px){
+            .feature-icon {
+                font-size: 22px;
+                width: 45px;
+                height: 45px;
+            }
+            .feature-title{
+                font-size: 18px;
+            }
+             .feature-subtitle {
+                font-size: 14px;
+            }
+         }
+
+         @media (max-width: 768px) {
+            .feature-icon {
+                font-size: 20px;
+                width: 40px;
+                height: 40px;
+            }
         }
 
         .feature-title {
@@ -495,6 +529,12 @@
             line-height: 1.4;
         }
 
+        @media (min-width: 1200px) and (max-width: 1399px){
+            .program-title {
+                font-size: 18px;
+            }
+        }
+
         .program-expert {
             color: #4f46e5;
             font-weight: 700;
@@ -579,7 +619,7 @@
 
         .steps-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
             position: relative;
         }
@@ -991,8 +1031,21 @@
                 "card1 card2 card3 card4"
                 "card5 card6 card7 card7";
         }
+
+        @media (min-width: 1200px) and (max-width: 1399px){
+            .section-title {
+                font-size: 36px;
+            }
+             .cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas:
+                    "card1 card2 card3"
+                    "card4 card5 card6"
+                    "card7 card7 card7";
+            }
+        }
  
-        @media (max-width: 1400px) {
+        @media (min-width: 993px) and (max-width: 1199px) {
             .cards-grid {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-areas:
@@ -1157,6 +1210,7 @@
             color: white;
             position: relative;
             overflow: hidden;
+            min-height: 220px;
         }
  
         #card7 .card-body {
@@ -1525,8 +1579,8 @@
         /* Find Us Container */
         .find-us-container {
             display: grid;
-            grid-template-columns: 1.5fr 1.7fr;
-            gap: 20px;
+            grid-template-columns: 1.1fr 1.7fr;
+            gap: 10px;
             margin-bottom: 50px;
         }
  
@@ -1563,14 +1617,14 @@
         .locations-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+            gap: 5px;
         }
  
         .location-card {
             background-color: #ffffff;
             border: 2px solid #e2e8f0;
             border-radius: 16px;
-            padding: 15px;
+            padding: 10px;
             transition: all 0.3s ease;
         }
  
@@ -1724,6 +1778,11 @@
             margin-bottom: 20px;
             line-height: 1.3;
         }
+        @media (min-width: 1200px) and (max-width: 1399px){
+            .left-content h3 {
+                font-size: 18px;
+            }
+        }
  
         .left-content p {
             font-size: 15px;
@@ -1792,6 +1851,11 @@
             margin-bottom: 25px;
             line-height: 1.3;
         }
+        @media (min-width: 1200px) and (max-width: 1399px){
+            .right-content h3 {
+                font-size: 18px;
+            }
+        }
  
         .right-content .contact-item {
             padding: 5px;
@@ -1808,6 +1872,11 @@
             font-size: 15px;
             color: #2c3e50;
             font-weight: 500;
+        }
+        @media (min-width: 1200px) and (max-width: 1399px){
+            .contact-value {
+                font-size: 12px;
+            }
         }
  
         .contact-value a {
