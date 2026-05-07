@@ -264,9 +264,11 @@
                 font-size: 22px;
                 width: 45px;
                 height: 45px;
+                padding: 7px;
             }
             .feature-title{
-                font-size: 18px;
+                font-size: 18px !important;
+                font-weight: 500;
             }
              .feature-subtitle {
                 font-size: 14px;
@@ -3722,3 +3724,4 @@
 	box-shadow: 2px 2px 3px #999;
   z-index:100;
 }
+
