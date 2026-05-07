@@ -2797,7 +2797,7 @@
 
         .ctn-locations-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
@@ -2831,7 +2831,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 22px;
             color: white;
             flex-shrink: 0;
         }
@@ -2846,6 +2846,10 @@
 
         .ctn-location-card:nth-child(3) .ctn-location-icon {
             background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
+        }
+
+        .ctn-location-card:nth-child(4) .ctn-location-icon {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0e0e0e 100%);
         }
 
         .ctn-location-info h3 {
@@ -2865,6 +2869,9 @@
         .ctn-location-card:nth-child(3) .ctn-location-info h3 {
             color: #06B6D4;
         }
+            .ctn-location-card:nth-child(4) .ctn-location-info h3 {
+                color: #1a1a1a;
+            }
 
         .ctn-location-subtitle {
             font-size: 17px;
@@ -2906,6 +2913,10 @@
             color: #06B6D4;
             border-color: #06B6D4;
         }
+        .ctn-location-card:nth-child(4) .ctn-map-btn {
+            color: #1a1a1a;
+            border-color: #1a1a1a;
+        }
 
         .ctn-location-card:nth-child(1) .ctn-map-btn:hover {
             background-color: #7C3AED;
@@ -2919,6 +2930,10 @@
 
         .ctn-location-card:nth-child(3) .ctn-map-btn:hover {
             background-color: #06B6D4;
+            color: white;
+        }
+        .ctn-location-card:nth-child(4) .ctn-map-btn:hover {
+            background-color: #1a1a1a;
             color: white;
         }
 
