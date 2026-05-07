@@ -1074,9 +1074,8 @@
              .cards-grid {
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-areas:
-                    "card1 card2 card3"
-                    "card4 card5 card6"
-                    "card7 card7 card7";
+                    "card1 card3 card4"
+                    "card5 card6 card7";
             }
         }
  
@@ -1084,10 +1083,9 @@
             .cards-grid {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-areas:
-                    "card1 card2"
-                    "card3 card4"
-                    "card5 card6"
-                    "card7 card7";
+                    "card1 card3"
+                    "card4 card5"
+                    "card6 card7";
             }
         }
  
@@ -1096,12 +1094,7 @@
                 grid-template-columns: 1fr;
                 grid-template-areas:
                     "card1"
-                    "card2"
-                    "card3"
-                    "card4"
-                    "card5"
-                    "card6"
-                    "card7";
+
             }
  
             .section-title {
@@ -1193,7 +1186,14 @@
             object-fit: cover;
             border-radius: 16px;
         }
- 
+
+        /* Hide card2 for screens below 1399px */
+        @media (max-width: 1399px) {
+            #card2 {
+                display: none;
+            }
+        }
+
         /* Card 3 - Tutors */
         #card3 {
             grid-area: card3;
