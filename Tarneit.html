@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept Tutoring - Tutoring in Tarneit, Done Right</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-teal: #00A8CC;
+            --dark-navy: #1C3A5B;
+            --gold-yellow: #FFC400;
+            --light-gray: #F5F5F5;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-teal) !important;
+            gap: 0.5rem;
+        }
+
+        .navbar-brand i {
+            font-size: 1.8rem;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--dark-navy) !important;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-teal) !important;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 245, 245, 0.5) 100%);
+            padding: 80px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 .navy {
+            color: var(--dark-navy);
+        }
+
+        .hero-content h1 .teal {
+            color: var(--primary-teal);
+        }
+
+        .hero-content h1 .gold {
+            color: var(--gold-yellow);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn-assessment {
+            background-color: var(--gold-yellow);
+            color: var(--dark-navy);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-assessment:hover {
+            background-color: #e6b000;
+            color: var(--dark-navy);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 196, 0, 0.3);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 0.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 15px;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-teal);
+        }
+
+        .feature-card h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* ===== WHY CHOOSE SECTION ===== */
+        .why-choose-section {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+
+        .why-choose-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .why-choose-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .why-card {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .why-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .why-card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .why-card:nth-child(1) .why-card-icon { background-color: #DCEEFB; color: var(--primary-teal); }
+        .why-card:nth-child(2) .why-card-icon { background-color: #FFE5D9; color: #FF6B6B; }
+        .why-card:nth-child(3) .why-card-icon { background-color: #E8DCFD; color: #7C5AD0; }
+        .why-card:nth-child(4) .why-card-icon { background-color: #FFF3D0; color: var(--gold-yellow); }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+        }
+
+        .why-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== EXPERT EDUCATORS SECTION ===== */
+        .expert-section {
+            background: linear-gradient(135deg, #1C3A5B 0%, #2E5A8C 100%);
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expert-section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(0, 168, 204, 0.1);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+        }
+
+        .expert-section::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 196, 0, 0.05);
+            border-radius: 50%;
+            bottom: -50px;
+            left: -50px;
+        }
+
+        .expert-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .expert-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            max-width: 400px;
+            line-height: 1.2;
+        }
+
+        .expert-section p {
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .expert-list-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .expert-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .expert-icon.icon-1 { background-color: rgba(0, 168, 204, 0.2); color: var(--primary-teal); }
+        .expert-icon.icon-2 { background-color: rgba(255, 196, 0, 0.2); color: var(--gold-yellow); }
+        .expert-icon.icon-3 { background-color: rgba(100, 200, 100, 0.2); color: #64C864; }
+
+        .expert-list-item h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .expert-list-item p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .expert-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .expert-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+
+        .experience-badge {
+            background-color: var(--white);
+            color: var(--dark-navy);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+
+        .experience-badge i {
+            font-size: 2rem;
+            color: var(--gold-yellow);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-badge p {
+            color: var(--dark-navy);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .experience-badge small {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* ===== PROGRAMS SECTION ===== */
+        .programs-section {
+            background-color: var(--light-gray);
+            padding: 80px 0;
+        }
+
+        .programs-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .programs-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .programs-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        .program-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            height: 100%;
+            position: relative;
+            border-top: 4px solid;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .program-card-1 { border-top-color: var(--primary-teal); }
+        .program-card-2 { border-top-color: var(--gold-yellow); }
+        .program-card-3 { border-top-color: #FF6B6B; }
+        .program-card-4 { border-top-color: #64C864; }
+        .program-card-5 { border-top-color: #7C5AD0; }
+
+        .program-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .program-card-1 .program-icon { color: var(--primary-teal); }
+        .program-card-2 .program-icon { color: var(--gold-yellow); }
+        .program-card-3 .program-icon { color: #FF6B6B; }
+        .program-card-4 .program-icon { color: #64C864; }
+        .program-card-5 .program-icon { color: #7C5AD0; }
+
+        .program-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .program-card ul { list-style: none; padding: 0; }
+
+        .program-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .program-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, var(--gold-yellow) 0%, #FFD966 100%);
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            color: var(--dark-navy);
+        }
+
+        .cta-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-card p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-navy);
+        }
+
+        .btn-book-assessment {
+            background-color: var(--dark-navy);
+            color: var(--white);
+            border: none;
+            padding: 10px 25px;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95rem;
+        }
+
+        .btn-book-assessment:hover {
+            background-color: var(--primary-teal);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== IN PERSON TUTORING SECTION (Image 1) ===== */
+        .inperson-section {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+
+        .inperson-image-wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inperson-image-wrap img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        .inperson-content .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .inperson-content h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .inperson-content p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+        }
+
+        .inperson-summary {
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .inperson-summary h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+        }
+
+        .inperson-summary ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .inperson-summary li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark-navy);
+        }
+
+        .inperson-summary li i {
+            color: var(--primary-teal);
+            font-size: 1rem;
+            width: 22px;
+            height: 22px;
+            background-color: rgba(0, 168, 204, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* ===== WHAT YOU CAN EXPECT SECTION (Image 2) ===== */
+        .expect-section {
+            background-color: var(--primary-teal);
+            padding: 80px 0;
+        }
+
+        .expect-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .expect-section .expect-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+        }
+
+        .expect-card {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .expect-card:hover {
+            background-color: rgba(255, 255, 255, 0.22);
+            transform: translateY(-5px);
+        }
+
+        .expect-card i {
+            font-size: 2rem;
+            color: var(--gold-yellow);
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+
+        .expect-card p {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--white);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* ===== CONTACT FORM SECTION ===== */
+        .contact-form-section {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+
+        .contact-form-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+            text-align: center;
+        }
+
+        .contact-form-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-form-section .form-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-form-wrap {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+        }
+
+        .contact-form-wrap .form-label {
+            font-weight: 600;
+            color: var(--dark-navy);
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-form-wrap .form-control,
+        .contact-form-wrap .form-select {
+            border: 1.5px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .contact-form-wrap .form-control:focus,
+        .contact-form-wrap .form-select:focus {
+            border-color: var(--primary-teal);
+            box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.12);
+            outline: none;
+        }
+
+        .contact-form-wrap textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit-form {
+            background-color: var(--gold-yellow);
+            color: var(--dark-navy);
+            border: none;
+            padding: 14px 40px;
+            font-weight: 700;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-submit-form:hover {
+            background-color: #e6b000;
+            color: var(--dark-navy);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 196, 0, 0.35);
+        }
+
+        .contact-info-panel {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, #2E5A8C 100%);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            color: var(--white);
+            height: 100%;
+        }
+
+        .contact-info-panel h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-info-panel p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-item .ci-icon {
+            width: 44px;
+            height: 44px;
+            background-color: rgba(0, 168, 204, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--primary-teal);
+            flex-shrink: 0;
+        }
+
+        .contact-info-item .ci-text strong {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-info-item .ci-text span {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .response-note {
+            background-color: rgba(0, 168, 204, 0.15);
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .response-note i {
+            color: var(--primary-teal);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .response-note p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* ===== FAQ SECTION (Image 3) ===== */
+        .faq-section {
+            background-color: #f8f9fc;
+            padding: 80px 0;
+        }
+
+        .faq-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+            text-align: center;
+        }
+
+        .faq-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 1.25rem;
+            border: 1px solid #ebebeb;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-item h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-teal);
+            margin-bottom: 0.85rem;
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ===== FOOTER SECTION (Image 4) ===== */
+        .footer-section {
+            background-color: #0f2340;
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-brand-wrap {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-brand-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--primary-teal), #00c4eb);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .footer-brand-text h5 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin: 0;
+        }
+
+        .footer-brand-text small {
+            color: var(--primary-teal);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            max-width: 280px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--primary-teal);
+            color: var(--primary-teal);
+            background-color: rgba(0, 168, 204, 0.1);
+        }
+
+        .footer-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 36px;
+            height: 3px;
+            background-color: var(--primary-teal);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.65rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.92rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-teal);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .footer-contact-item .fci-icon {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            flex-shrink: 0;
+        }
+
+        .footer-contact-item .fci-text small {
+            display: block;
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 0.78rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .footer-contact-item .fci-text span {
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2rem 0 1.5rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--primary-teal);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .why-choose-section h2, .expert-section h2, .programs-section h2,
+            .inperson-content h2, .expect-section h2, .faq-section h2,
+            .contact-form-section h2 { font-size: 2rem; }
+            .hero-section, .why-choose-section, .expert-section, .programs-section,
+            .inperson-section, .expect-section, .faq-section, .contact-form-section { padding: 50px 0; }
+            .experience-badge { position: static; margin-top: 1.5rem; }
+            .expert-image { margin-top: 3rem; }
+            .features-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+            .contact-form-wrap { padding: 2rem 1.5rem; }
+            .contact-info-panel { margin-top: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .footer-bottom-links { justify-content: center; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 { font-size: 2rem; }
+            .navbar-nav .nav-link { margin: 0.5rem 0; }
+            .program-card { margin-bottom: 1.5rem; }
+            .inperson-image-wrap img { border-radius: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="new/img/concept_logo.webp" alt="" >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#locations">OUR LOCATIONS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portal">STUDENT PORTAL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>
+                            Tutoring in <span class="teal">Tarneit</span>,<br>
+                            <span class="gold">Done Right</span>
+                        </h1>
+                        <p>
+                            Every child learns differently. Some need a little extra time. Some need someone who explains things a different way. Some just need to feel confident enough to try. At Concept Tutoring, we work with students from Kinder through to Year 10 — meeting them where they are, and helping them grow from there. We're based right here in Tarneit, and we'd love to help your child find their footing.
+                        </p>
+                        <button class="btn-assessment">
+                            <i class="fas fa-calendar"></i>
+                            BOOK A FREE ASSESSMENT
+                        </button>
+
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                                <h3>Small Groups</h3>
+                                <p>(Up to 6 Students)</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                                <h3>Strong Foundation</h3>
+                                <p>to Advanced Skills</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+                                <h3>Weekly, In-person & Online Support</h3>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                                <h3>Regular Assessments</h3>
+                                <p>& Progress Tracking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="img-1.png" alt="Student and Tutor">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE SECTION -->
+    <section class="why-choose-section" id="about">
+        <div class="container">
+            <div class="section-label text-center">OUR APPROACH</div>
+            <h2>Why Parents Choose Concept Tutoring</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-card-icon"><i class="fas fa-arrow-trend-up"></i></div>
+                        <h3>Clear improvement in results</h3>
+                        <p>We focus on measurable progress, helping students not just understand concepts, but excel in their application.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-card-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>A structured learning approach</h3>
+                        <p>Our methodology is logical and step-by-step, ensuring no gaps in foundational knowledge.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-card-icon"><i class="fas fa-person-chalkboard"></i></div>
+                        <h3>Experienced tutors who know the curriculum</h3>
+                        <p>Our team is deeply familiar with the Victorian curriculum and what schools expect.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-card-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h3>A reliable, local centre they can trust</h3>
+                        <p>Based in Tarneit, we provide a safe, consistent, and welcoming environment for your child's education.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERT EDUCATORS SECTION -->
+    <section class="expert-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="expert-label">EXPERT EDUCATORS</div>
+                    <h2>Experienced Tutors You Can Rely On</h2>
+                    <p>Our tutors bring 10+ years of teaching experience, working with students across different levels and abilities.</p>
+                    <div class="expert-list-item">
+                        <div class="expert-icon icon-1"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <h3>Building strong fundamentals</h3>
+                            <p>Ensuring core concepts are fully understood before moving on.</p>
+                        </div>
+                    </div>
+                    <div class="expert-list-item">
+                        <div class="expert-icon icon-2"><i class="fas fa-star"></i></div>
+                        <div>
+                            <h3>Improving confidence in learning</h3>
+                            <p>Creating a supportive environment where students feel safe to ask questions.</p>
+                        </div>
+                    </div>
+                    <div class="expert-list-item">
+                        <div class="expert-icon icon-3"><i class="fas fa-square-check"></i></div>
+                        <div>
+                            <h3>Helping students stay consistent</h3>
+                            <p>Developing study habits and routines that lead to long-term success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="expert-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop" alt="Expert Tutors">
+                        <div class="experience-badge">
+                            <i class="fas fa-medal"></i>
+                            <p>10+ Years</p>
+                            <small>Teaching Experience</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <section class="programs-section" id="programs">
+        <div class="container">
+            <div class="section-label text-center">COMPREHENSIVE CURRICULUM</div>
+            <h2>Our Programs</h2>
+            <p class="programs-intro">Tailored educational support designed to meet your child exactly where they are in their academic journey.</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card program-card-1">
+                        <div class="program-icon"><i class="fas fa-book"></i></div>
+                        <h3>Kinder to Year 10 — Literacy & Numeracy</h3>
+                        <ul>
+                            <li>Phonics and reading skills</li>
+                            <li>Writing clarity and structure</li>
+                            <li>Core numeracy concepts</li>
+                            <li>Confidence in learning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card program-card-2">
+                        <div class="program-icon"><i class="fas fa-person-chalkboard"></i></div>
+                        <h3>School Readiness Program</h3>
+                        <ul>
+                            <li>Develop early literacy skills</li>
+                            <li>Develop early numeracy skills</li>
+                            <li>Build confidence</li>
+                            <li>Prepare for school environment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card program-card-3">
+                        <div class="program-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>NAPLAN & ICAS Prep (Yrs 3, 5, 7, 9)</h3>
+                        <ul>
+                            <li>Exam-style questions</li>
+                            <li>Timed practice sessions</li>
+                            <li>Strong foundational skills</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card program-card-4">
+                        <div class="program-icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <h3>Problem Solving — All Levels</h3>
+                        <ul>
+                            <li>Think logically and critically</li>
+                            <li>Approach complex questions</li>
+                            <li>Improve analytical reasoning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card program-card-5">
+                        <div class="program-icon"><i class="fas fa-microscope"></i></div>
+                        <h3>Selective School Exam Prep (Grades 6–8)</h3>
+                        <ul>
+                            <li>Understand exam patterns</li>
+                            <li>Improve speed and accuracy</li>
+                            <li>Build exam confidence</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="cta-card">
+                        <h3>Not sure which program is right?</h3>
+                        <p>Book a free assessment and we'll help identify the best path for your child.</p>
+                        <button class="btn-book-assessment">Book Assessment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== IN PERSON TUTORING SECTION (Image 1) ===== -->
+    <section class="inperson-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="inperson-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=480&fit=crop" alt="In Person Tutoring">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <div class="inperson-content">
+                        <span class="section-label">OUR PHILOSOPHY</span>
+                        <h2>In Person Tutoring That Makes a Difference</h2>
+                        <p>All sessions are in person for better focus, direct interaction, and a consistent environment. We believe that physical presence creates a stronger connection between tutor and student, allowing for immediate feedback and real-time adjustments to teaching methods.</p>
+                        <p>While our core focus is face-to-face learning, we also provide online classes to reinforce concepts practiced in person, ensuring continuous support even from home.</p>
+                        <div class="inperson-summary">
+                            <h4>Why Choose Concept Tutoring (Summary)</h4>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    Tailored Learning
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    Expert Educators
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    Comprehensive Programs
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHAT YOU CAN EXPECT SECTION (Image 2) ===== -->
+    <section class="expect-section">
+        <div class="container">
+            <h2>What You Can Expect</h2>
+            <p class="expect-subtitle">The outcomes we strive for with every student who walks through our doors.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg col-md-4 col-sm-6">
+                    <div class="expect-card">
+                        <i class="fas fa-arrow-trend-up"></i>
+                        <p>Consistent academic improvement</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4 col-sm-6">
+                    <div class="expect-card">
+                        <i class="fas fa-book-open-reader"></i>
+                        <p>Strong literacy and numeracy skills</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4 col-sm-6">
+                    <div class="expect-card">
+                        <i class="fas fa-face-smile"></i>
+                        <p>Better confidence in school</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4 col-sm-6">
+                    <div class="expect-card">
+                        <i class="fas fa-list-check"></i>
+                        <p>Structured and disciplined learning</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4 col-sm-6">
+                    <div class="expect-card">
+                        <i class="fas fa-layer-group"></i>
+                        <p>Support across all key academic stages</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT FORM SECTION (Before FAQ) ===== -->
+    <section class="contact-form-section" id="contact">
+        <div class="container">
+            <span class="section-label">GET IN TOUCH</span>
+            <h2>Book a Free Assessment</h2>
+            <p class="form-subtitle">Fill in the form below and we'll get back to you within 24 hours.</p>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                    <div class="contact-form-wrap">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Parent / Guardian Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="e.g. Sarah Johnson">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" placeholder="e.g. 0420 000 000">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" placeholder="e.g. sarah@email.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Child's Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="e.g. Liam Johnson">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Current Year Level <span class="text-danger">*</span></label>
+                                <select class="form-select">
+                                    <option value="" disabled selected>Select year level</option>
+                                    <option>Kinder / Prep</option>
+                                    <option>Year 1</option>
+                                    <option>Year 2</option>
+                                    <option>Year 3</option>
+                                    <option>Year 4</option>
+                                    <option>Year 5</option>
+                                    <option>Year 6</option>
+                                    <option>Year 7</option>
+                                    <option>Year 8</option>
+                                    <option>Year 9</option>
+                                    <option>Year 10</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Program of Interest</label>
+                                <select class="form-select">
+                                    <option value="" disabled selected>Select a program</option>
+                                    <option>Literacy & Numeracy</option>
+                                    <option>School Readiness</option>
+                                    <option>NAPLAN & ICAS Prep</option>
+                                    <option>Problem Solving</option>
+                                    <option>Selective School Exam Prep</option>
+                                    <option>Not Sure — Need Guidance</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Additional Notes</label>
+                                <textarea class="form-control" placeholder="Tell us a little about your child's current challenges or goals..."></textarea>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <button class="btn-submit-form">
+                                    <i class="fas fa-calendar-check"></i>
+                                    Book My Free Assessment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="contact-info-panel">
+                        <h3>We'd Love to Hear From You</h3>
+                        <p>Reach out through any of the channels below, and our friendly team will help find the right program for your child.</p>
+
+                        <div class="contact-info-item">
+                            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                            <div class="ci-text">
+                                <strong>PHONE</strong>
+                                <span>0420 869 924</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="ci-text">
+                                <strong>EMAIL</strong>
+                                <span>tutoringconcept9@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="ci-text">
+                                <strong>WHATSAPP</strong>
+                                <span>0420 869 924</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="ci-text">
+                                <strong>LOCATION</strong>
+                                <span>Tarneit, VIC, Australia</span>
+                            </div>
+                        </div>
+
+                        <div class="response-note">
+                            <i class="fas fa-clock"></i>
+                            <p>We typically respond within 24 hours. For urgent inquiries, please WhatsApp or call us directly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ SECTION (Image 3) ===== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <span class="section-label">GOT QUESTIONS?</span>
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="col-lg-8" style="justify-self: center;">
+                <div class="faq-item">
+                <h4>Do you offer online tutoring?</h4>
+                <p>Yes, while our primary focus is in-person learning for better engagement, we do offer online classes to reinforce concepts and provide flexibility when needed.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What age groups do you tutor?</h4>
+                <p>We tutor students from Kindergarten through to Year 10, covering all crucial stages of their primary and early secondary education.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do you follow the school curriculum?</h4>
+                <p>Absolutely. Our structured approach is designed to align with and support what your child is currently learning in their school curriculum.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How often should my child attend tutoring?</h4>
+                <p>This depends on the individual student's needs, but typically we recommend weekly sessions to maintain consistency and build strong foundational skills.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How many students are in each session?</h4>
+                <p>We keep our groups small — a maximum of 6 students per session — so every child receives focused attention and personalised support from their tutor.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do you offer a free assessment before enrolling?</h4>
+                <p>Yes! We offer a free initial assessment to understand your child's current level, identify any gaps, and recommend the most suitable program for their needs.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER SECTION (Image 4) ===== -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Brand Col -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand-wrap">
+                        <div class="footer-brand-text" style="background-color: #fff; padding: 5px 10px;">
+                            <img src="new/img/concept_logo.webp" alt="Concept Tutoring Logo" style="width: 180px;">
+                        </div>
+                    </div>
+                    <p class="footer-tagline">Helping your child find their footing. We work with students steadily and thoughtfully, helping them build the skills and confidence they need to do their genuine best.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Col -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-heading">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#">The Exam</a></li>
+                        <li><a href="#">Our Approach</a></li>
+                        <li><a href="#">What We Cover</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect With Us Col -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-heading">Connect With Us</h6>
+
+                    <div class="footer-contact-item">
+                        <div class="fci-icon"><i class="fas fa-phone"></i></div>
+                        <div class="fci-text">
+                            <small>Phone</small>
+                            <span>0420 869 924</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <div class="fci-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="fci-text">
+                            <small>Email</small>
+                            <span>tutoringconcept9@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <div class="fci-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="fci-text">
+                            <small>WhatsApp</small>
+                            <span>0420 869 924</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>© 2026 Concept Tutoring — Selective Entry Program. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
