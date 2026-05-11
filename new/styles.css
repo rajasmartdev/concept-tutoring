@@ -145,7 +145,7 @@
             font-weight: 500;
         }
 
-        .cta-button {
+        .hero-content .cta-button {
             background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
             color: #1e3a5f !important;
             padding: 15px 35px;
@@ -169,6 +169,33 @@
         }
 
         .cta-button i {
+            font-size: 18px;
+        }
+
+        .cta-button1 {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            color: #1e3a5f !important;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .cta-button1:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+            background: linear-gradient(135deg, #ffb300 0%, #ff9800 100%);
+            color: #1e3a5f !important;
+        }
+
+        .cta-button1 i {
             font-size: 18px;
         }
 
@@ -205,6 +232,10 @@
             .hero-overlay-text {
                 font-size: 26px;
                 left: 25%;
+            }
+
+            .hero-section .cta-button {
+                display: none;
             }
          }
 
@@ -277,9 +308,9 @@
 
          @media (max-width: 768px) {
             .feature-icon {
-                font-size: 20px;
-                width: 40px;
-                height: 40px;
+                font-size: 18px;
+                width: 45px;
+                height: 45px;
             }
         }
 

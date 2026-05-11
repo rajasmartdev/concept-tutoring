@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept Tutoring - NAPLAN Preparation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-teal: #00A8CC;
+            --dark-navy: #1C3A5B;
+            --gold-yellow: #FFC400;
+            --light-gray: #F5F5F5;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-teal) !important;
+            gap: 0.5rem;
+        }
+
+        .navbar-brand i {
+            font-size: 1.8rem;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--dark-navy) !important;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-teal) !important;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 245, 245, 0.5) 100%);
+            padding: 20px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 .navy {
+            color: var(--dark-navy);
+        }
+
+        .hero-content h1 .teal {
+            color: var(--primary-teal);
+        }
+
+        .hero-content h1 .gold {
+            color: var(--gold-yellow);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn-assessment {
+            background-color: var(--gold-yellow);
+            color: var(--dark-navy);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-assessment:hover {
+            background-color: #e6b000;
+            color: var(--dark-navy);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 196, 0, 0.3);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 95%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 0.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 15px;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-teal);
+        }
+
+        .feature-card h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* ===== UNDERSTANDING SECTION ===== */
+        .understanding-section {
+            background: linear-gradient(120deg, #f0f9ff 0%, #e8f4f8 100%);
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .understanding-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0,168,204,0.08) 0%, rgba(0,168,204,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .understanding-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,196,0,0.06) 0%, rgba(255,196,0,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .understanding-wrapper {
+            position: relative;
+        }
+        
+        .understanding-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-teal) 0%, #0088a8 100%);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(0,168,204,0.3);
+        }
+        
+        .understanding-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--dark-navy);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .understanding-title span {
+            color: var(--primary-teal);
+            display: inline-block;
+        }
+        
+        .understanding-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(0,168,204,0.2);
+            border-radius: 10px;
+            z-index: -1;
+        }
+        
+        .understanding-desc {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: #4a5568;
+            margin-bottom: 2rem;
+        }
+        
+        .exam-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .exam-area-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,168,204,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .exam-area-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px rgba(0,168,204,0.15);
+            border-color: var(--primary-teal);
+        }
+        
+        .exam-area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-teal), var(--gold-yellow));
+        }
+        
+        .exam-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(0,168,204,0.1) 0%, rgba(0,168,204,0.05) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            font-size: 1.8rem;
+            color: var(--primary-teal);
+            transition: all 0.3s ease;
+        }
+        
+        .exam-area-card:hover .exam-icon {
+            background: var(--primary-teal);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .exam-area-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .exam-area-card p {
+            font-size: 0.8rem;
+            color: #718096;
+            margin: 0;
+        }
+        
+        .insight-box {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            margin-top: 2.5rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--gold-yellow);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .insight-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,196,0,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--gold-yellow);
+        }
+        
+        .insight-text {
+            flex: 1;
+        }
+        
+        .insight-text p {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--dark-navy);
+        }
+        
+        .insight-text small {
+            color: #718096;
+            font-size: 0.85rem;
+        }
+
+        /* ===== HOW WE HELP SECTION ===== */
+        .how-help-section {
+            background: linear-gradient(135deg, #1C3A5B 0%, #2E5A8C 100%);
+            padding: 50px 0;
+        }
+
+        .how-help-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .how-help-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .help-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .help-list li {
+            padding: 0.7rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .help-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .how-help-section p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        /* ===== OUR APPROACH SECTION ===== */
+        .approach-section {
+            background-color: var(--white);
+            padding: 50px 0;
+        }
+
+        .approach-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .approach-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 2rem;
+        }
+
+        .approach-step {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 3px solid var(--primary-teal);
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            min-height: 160px;
+        }
+
+        .approach-step h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .approach-step p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ===== WHAT WE COVER SECTION ===== */
+        .cover-section {
+            background-color: var(--primary-teal);
+            padding: 50px 0;
+            color: var(--white);
+        }
+
+        .cover-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .cover-card {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            height: 100%;
+            backdrop-filter: blur(4px);
+        }
+
+        .cover-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .cover-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .cover-card p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* ===== WHO IS THIS FOR ===== */
+        .who-for-section {
+            background-color: var(--white);
+            padding: 50px 0;
+        }
+
+        .who-for-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .who-for-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .who-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .who-list li {
+            padding: 0.6rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .who-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-teal);
+            font-weight: 700;
+        }
+
+        /* ===== WHAT YOUR CHILD WILL GAIN ===== */
+        .gain-section {
+            background-color: var(--dark-navy);
+            padding: 50px 0;
+            color: var(--white);
+        }
+
+        .gain-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .gain-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .gain-card i {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .gain-card p {
+            font-size: 0.95rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        /* ===== WHY PARENTS COME ===== */
+        .why-parents-section {
+            background-color: var(--light-gray);
+            padding: 50px 0;
+        }
+
+        .why-parents-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .why-parents-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 2rem;
+        }
+
+        .parent-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .parent-card i {
+            font-size: 1.8rem;
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+
+        .parent-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ===== CONTACT FORM SECTION ===== */
+        .contact-form-section {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+
+        .contact-form-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+            text-align: center;
+        }
+
+        .contact-form-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-form-section .form-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-form-wrap {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+        }
+
+        .contact-form-wrap .form-label {
+            font-weight: 600;
+            color: var(--dark-navy);
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-form-wrap .form-control,
+        .contact-form-wrap .form-select {
+            border: 1.5px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .contact-form-wrap .form-control:focus,
+        .contact-form-wrap .form-select:focus {
+            border-color: var(--primary-teal);
+            box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.12);
+            outline: none;
+        }
+
+        .contact-form-wrap textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit-form {
+            background-color: var(--gold-yellow);
+            color: var(--dark-navy);
+            border: none;
+            padding: 14px 40px;
+            font-weight: 700;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-submit-form:hover {
+            background-color: #e6b000;
+            color: var(--dark-navy);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 196, 0, 0.35);
+        }
+
+        .contact-info-panel {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, #2E5A8C 100%);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            color: var(--white);
+            height: 100%;
+        }
+
+        .contact-info-panel h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-info-panel p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-item .ci-icon {
+            width: 44px;
+            height: 44px;
+            background-color: rgba(0, 168, 204, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--primary-teal);
+            flex-shrink: 0;
+        }
+
+        .contact-info-item .ci-text strong {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-info-item .ci-text span {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .response-note {
+            background-color: rgba(0, 168, 204, 0.15);
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .response-note i {
+            color: var(--primary-teal);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .response-note p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background-color: #f8f9fc;
+            padding: 50px 0;
+        }
+
+        .faq-section .section-label {
+            color: var(--primary-teal);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+            text-align: center;
+        }
+
+        .faq-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.25rem;
+            border: 1px solid #ebebeb;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-teal);
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer-section {
+            background-color: #0f2340;
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-brand-wrap {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-brand-text h5 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin: 0;
+        }
+
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            max-width: 280px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--primary-teal);
+            color: var(--primary-teal);
+            background-color: rgba(0, 168, 204, 0.1);
+        }
+
+        .footer-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 36px;
+            height: 3px;
+            background-color: var(--primary-teal);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.65rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.92rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-teal);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .footer-contact-item .fci-icon {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            flex-shrink: 0;
+        }
+
+        .footer-contact-item .fci-text small {
+            display: block;
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 0.78rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .footer-contact-item .fci-text span {
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2rem 0 1.5rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--primary-teal);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            .understanding-title { font-size: 2rem; }
+            .how-help-section h2, .approach-section h2, .cover-section h2,
+            .who-for-section h2, .gain-section h2, .why-parents-section h2, .faq-section h2 { font-size: 1.8rem; }
+            .hero-section, .understanding-section, .how-help-section, .approach-section,
+            .cover-section, .who-for-section, .gain-section, .why-parents-section,
+            .faq-section { padding: 50px 0; }
+            .features-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .footer-bottom-links { justify-content: center; }
+            .approach-step { padding: 1rem; }
+            .exam-cards-grid { gap: 1rem; }
+            .insight-box { flex-direction: column; text-align: center; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 { font-size: 1.8rem; }
+            .navbar-nav .nav-link { margin: 0.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div style="background-color: #fff; padding: 5px 10px; border-radius: 8px;">
+                    <span style="color: var(--primary-teal); font-weight: 800;">Concept</span>
+                    <span style="color: var(--dark-navy); font-weight: 800;">Tutoring</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#approach">OUR APPROACH</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>
+                            NAPLAN <span class="teal">Preparation</span>
+                        </h1>
+                        <p>
+                            Help Your Child Feel Ready — Not Rushed
+                        </p>
+                        <p>
+                            Our NAPLAN program is designed to build strong skills, improve confidence, and help students feel prepared — both for the test and for the year ahead.
+                        </p>
+                        <p>
+                            We don't just revise content. We help students understand it properly, so they can apply it with confidence.
+                        </p>
+                        <button class="btn-assessment">
+                            <i class="fas fa-calendar"></i>
+                            BOOK A FREE ASSESSMENT
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=400&fit=crop" alt="Student preparing for NAPLAN">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNDERSTANDING NAPLAN SECTION -->
+    <section class="understanding-section">
+        <div class="container understanding-wrapper">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="understanding-badge">WHAT IS NAPLAN</div>
+                    <h2 class="understanding-title">What is <span>NAPLAN</span> & Why It Matters</h2>
+                    <p class="understanding-desc mx-auto" style="max-width: 800px;">
+                        NAPLAN (National Assessment Program – Literacy and Numeracy) is taken by students in Years 3, 5, 7, and 9 across Australia.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Exam Areas Grid -->
+            <div class="exam-cards-grid">
+                <div class="exam-area-card">
+                    <div class="exam-icon"><i class="fas fa-book-open"></i></div>
+                    <h4>Reading</h4>
+                    <p>Understanding & interpreting texts</p>
+                </div>
+                <div class="exam-area-card">
+                    <div class="exam-icon"><i class="fas fa-feather"></i></div>
+                    <h4>Writing</h4>
+                    <p>Structured & creative expression</p>
+                </div>
+                <div class="exam-area-card">
+                    <div class="exam-icon"><i class="fas fa-spell-check"></i></div>
+                    <h4>Language Conventions</h4>
+                    <p>Spelling, grammar & punctuation</p>
+                </div>
+                <div class="exam-area-card">
+                    <div class="exam-icon"><i class="fas fa-calculator"></i></div>
+                    <h4>Numeracy</h4>
+                    <p>Problem-solving & number skills</p>
+                </div>
+            </div>
+            
+            <!-- Key Insight Box -->
+            <div class="insight-box">
+                <div class="insight-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="insight-text">
+                    <p><strong>It's not a pass-or-fail test.</strong> It simply shows how your child is progressing and highlights areas where they may need support.</p>
+                    <small>Understanding your child's strengths and areas for growth is the first step to meaningful improvement.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Preparation Makes a Difference -->
+    <section class="how-help-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-label">WHY PREPARE</div>
+                    <h2>Why Preparation Makes a Difference</h2>
+                    <p>Many students know the material but aren't always confident applying it under test conditions.</p>
+                    <p>Our program focuses on helping them:</p>
+                    <ul class="help-list">
+                        <li>Work with greater accuracy and efficiency</li>
+                        <li>Understand different question types</li>
+                        <li>Build confidence through structured practice</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=400&fit=crop" alt="Confident student">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Our Program Works -->
+    <section class="approach-section" id="approach">
+        <div class="container">
+            <div class="section-label text-center">OUR PROGRAM</div>
+            <h2 class="text-center">How Our Program Works</h2>
+            <p class="text-center mb-5" style="color: #666;">We keep our approach simple, structured, and focused.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="approach-step">
+                        <h4>A structured 15-week program</h4>
+                        <p>We support students with NAPLAN preparation through a structured 15-week program that revises the full year's curriculum. Students work through carefully designed worksheets at different levels to build a clear understanding of key concepts. This helps them feel confident in their learning and well-prepared for the next school year.</p>
+                    </div>
+                    <div class="approach-step">
+                        <h4>Filling learning gaps</h4>
+                        <p>With this program, we focus on filling learning gaps so students feel more confident in their current work. We also introduce selected topics from the next year's curriculum, so they're not just catching up — they're getting ahead.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="approach-step">
+                        <h4>NAPLAN-style practice</h4>
+                        <p>Students complete four full-length online practice tests, helping them become familiar with exam conditions and feel more relaxed on the day.</p>
+                    </div>
+                    <div class="approach-step">
+                        <h4>Skills beyond content</h4>
+                        <p>We also support students with: Time management, Question analysis, Problem-solving strategies. Ongoing progress updates — You'll always know how your child is improving.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Cover -->
+    <section class="cover-section">
+        <div class="container">
+            <h2>What We Cover</h2>
+            <p class="text-center mb-4" style="opacity: 0.9;">We support all key NAPLAN areas:</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3 col-6"><div class="cover-card"><i class="fas fa-book-open"></i><h4>Reading</h4><p>Understanding texts, identifying key ideas</p></div></div>
+                <div class="col-md-3 col-6"><div class="cover-card"><i class="fas fa-pen-fancy"></i><h4>Writing</h4><p>Organising ideas clearly, strong responses</p></div></div>
+                <div class="col-md-3 col-6"><div class="cover-card"><i class="fas fa-spell-check"></i><h4>Language Conventions</h4><p>Spelling, punctuation & grammar</p></div></div>
+                <div class="col-md-3 col-6"><div class="cover-card"><i class="fas fa-chart-line"></i><h4>Numeracy</h4><p>Problem-solving & applying maths</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="who-for-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=500&h=400&fit=crop" alt="Students learning">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-label">TARGET AUDIENCE</div>
+                    <h2>Who This Is For</h2>
+                    <ul class="who-list">
+                        <li>Students towards end of Years 2, 4, 6, or 8</li>
+                        <li>Students aiming to improve or extend their results</li>
+                        <li>Parents looking for structured preparation without added pressure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Can Expect -->
+    <section class="gain-section">
+        <div class="container">
+            <h2>What You Can Expect</h2>
+            <p class="text-center mb-4" style="opacity: 0.9;">Over time, students usually:</p>
+            <div class="row g-4">
+                <div class="col-md-3 col-6"><div class="gain-card"><i class="fas fa-smile"></i><p>Feel more confident going into exams</p></div></div>
+                <div class="col-md-3 col-6"><div class="gain-card"><i class="fas fa-hourglass-half"></i><p>Work more efficiently under time pressure</p></div></div>
+                <div class="col-md-3 col-6"><div class="gain-card"><i class="fas fa-ban"></i><p>Make fewer avoidable mistakes</p></div></div>
+                <div class="col-md-3 col-6"><div class="gain-card"><i class="fas fa-question-circle"></i><p>Better understand how to approach questions</p></div></div>
+            </div>
+            <p class="text-center mt-5" style="opacity: 0.9;">The goal isn't just better NAPLAN results — it's building skills that carry into the next school year and beyond.</p>
+        </div>
+    </section>
+
+    <!-- Why Parents Choose Us -->
+    <section class="why-parents-section">
+        <div class="container">
+            <div class="section-label text-center">WHY US</div>
+            <h2 class="text-center">Why Parents Choose Us</h2>
+            <div class="row g-4">
+                <div class="col-md-4"><div class="parent-card"><i class="fas fa-chalkboard-user"></i><p>Experienced and qualified tutors</p></div></div>
+                <div class="col-md-4"><div class="parent-card"><i class="fas fa-building"></i><p>Supportive and structured learning environment</p></div></div>
+                <div class="col-md-4"><div class="parent-card"><i class="fas fa-chart-simple"></i><p>Clear and regular feedback</p></div></div>
+            </div>
+            <p class="text-center mt-4" style="color: var(--primary-teal); font-weight: 600;">We focus on meaningful progress and long-term understanding.</p>
+        </div>
+    </section>
+
+    <!-- ===== GET IN TOUCH SECTION ===== -->
+    <section class="contact-form-section" id="contact">
+        <div class="container">
+            <span class="section-label">GET IN TOUCH</span>
+            <h2>Book a Free Assessment</h2>
+            <p class="form-subtitle">Fill in the form below and we'll get back to you within 24 hours.</p>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                    <div class="contact-form-wrap">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Parent / Guardian Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="e.g. Sarah Johnson">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" placeholder="e.g. 0420 000 000">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" placeholder="e.g. sarah@email.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Child's Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="e.g. Liam Johnson">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Current Year Level <span class="text-danger">*</span></label>
+                                <select class="form-select">
+                                    <option value="" disabled selected>Select year level</option>
+                                    <option>Kinder / Prep</option>
+                                    <option>Year 1</option>
+                                    <option>Year 2</option>
+                                    <option>Year 3</option>
+                                    <option>Year 4</option>
+                                    <option>Year 5</option>
+                                    <option>Year 6</option>
+                                    <option>Year 7</option>
+                                    <option>Year 8</option>
+                                    <option>Year 9</option>
+                                    <option>Year 10</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Program of Interest</label>
+                                <select class="form-select">
+                                    <option value="" disabled selected>Select a program</option>
+                                    <option>Literacy & Numeracy</option>
+                                    <option>School Readiness</option>
+                                    <option>NAPLAN & ICAS Prep</option>
+                                    <option>Problem Solving</option>
+                                    <option>Selective School Exam Prep</option>
+                                    <option>Not Sure — Need Guidance</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Additional Notes</label>
+                                <textarea class="form-control" placeholder="Tell us a little about your child's current challenges or goals..."></textarea>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <button class="btn-submit-form">
+                                    <i class="fas fa-calendar-check"></i>
+                                    Book My Free Assessment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="contact-info-panel">
+                        <h3>We'd Love to Hear From You</h3>
+                        <p>Reach out through any of the channels below, and our friendly team will help find the right program for your child.</p>
+
+                        <div class="contact-info-item">
+                            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                            <div class="ci-text">
+                                <strong>PHONE</strong>
+                                <span>0420 869 924</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="ci-text">
+                                <strong>EMAIL</strong>
+                                <span>tutoringconcept9@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="ci-text">
+                                <strong>WHATSAPP</strong>
+                                <span>0420 869 924</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="ci-text">
+                                <strong>LOCATION</strong>
+                                <span>Tarneit, VIC, Australia</span>
+                            </div>
+                        </div>
+
+                        <div class="response-note">
+                            <i class="fas fa-clock"></i>
+                            <p>We typically respond within 24 hours. For urgent inquiries, please WhatsApp or call us directly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <span class="section-label">FREQUENTLY ASKED QUESTIONS</span>
+            <h2>FAQs</h2>
+            <div class="col-lg-8 mx-auto">
+                <div class="faq-item"><h4>Does my child need NAPLAN preparation?</h4><p>If they need more confidence or clarity in Maths or English, structured preparation can help.</p></div>
+                <div class="faq-item"><h4>When do we start?</h4><p>Starting in October in the year prior works well, but earlier preparation allows more time to build confidence.</p></div>
+                <div class="faq-item"><h4>Is this only for struggling students?</h4><p>Not at all. Many students use preparation to strengthen skills and aim for higher results.</p></div>
+                <div class="faq-item"><h4>How often are sessions?</h4><p>1–2 sessions per week is usually effective.</p></div>
+                <div class="faq-item"><h4>Are online sessions effective?</h4><p>Yes, they are flexible and just as effective as in-person sessions.</p></div>
+                <div class="faq-item"><h4>Will this reduce exam stress?</h4><p>Yes. Familiarity with the format and regular practice helps students feel more at ease.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand-wrap">
+                        <div class="footer-brand-text">
+                            <h5>Concept Tutoring</h5>
+                            <small style="color: var(--primary-teal);">NAPLAN PREPARATION PROGRAM</small>
+                        </div>
+                    </div>
+                    <p class="footer-tagline">Helping your child feel ready — not rushed. Building strong skills, improving confidence, and preparing students both for the test and for the year ahead.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-heading">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#approach">Our Program</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-heading">Connect With Us</h6>
+                    <div class="footer-contact-item"><div class="fci-icon"><i class="fas fa-phone"></i></div><div class="fci-text"><small>Phone</small><span>0420 869 924</span></div></div>
+                    <div class="footer-contact-item"><div class="fci-icon"><i class="fas fa-envelope"></i></div><div class="fci-text"><small>Email</small><span>tutoringconcept9@gmail.com</span></div></div>
+                    <div class="footer-contact-item"><div class="fci-icon"><i class="fab fa-whatsapp"></i></div><div class="fci-text"><small>WhatsApp</small><span>0420 869 924</span></div></div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom"><p>© 2026 Concept Tutoring — NAPLAN Preparation Program. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Terms of Use</a><a href="#">Privacy Policy</a></div></div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
