@@ -62,7 +62,9 @@
         /* ===== HERO SECTION ===== */
         .hero-section {
             position: relative;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(236, 246, 251, 0.9) 35%, rgba(255, 255, 255, 0.8) 100%);
+            background: url('images-landing/Tarneit.png');
+            background-size: cover;
+            background-position: center;
             padding: 40px 0;
             min-height: 100vh;
             display: flex;
@@ -70,30 +72,28 @@
             overflow: hidden;
         }
 
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            width: 420px;
-            height: 420px;
-            top: -100px;
-            right: -120px;
-            background: radial-gradient(circle at 30% 30%, rgba(0, 168, 204, 0.18), transparent 55%);
-            border-radius: 50%;
-            transform: rotate(10deg);
-            z-index: 1;
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 20px 0;
+                background-position: right;
+            }
+
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(245, 245, 245, 0.8);
+                z-index: 1;
+            }
         }
 
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            bottom: -220px;
-            left: -180px;
-            background: radial-gradient(circle at 40% 40%, rgba(255, 196, 0, 0.14), transparent 60%);
-            border-radius: 50%;
-            z-index: 1;
-        }
+        
+
+        
 
         .hero-content,
         .hero-image {
@@ -174,8 +174,9 @@
         .feature-card {
             text-align: center;
             padding: 0.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             border-radius: 15px;
+            background: rgba(255, 255, 255, 0.02);
         }
 
         .feature-icon {
@@ -1149,9 +1150,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="hero-image">
+                    <!-- <div class="hero-image">
                         <img src="img-1.png" alt="Student and Tutor">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

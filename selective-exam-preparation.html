@@ -62,7 +62,9 @@
         /* ===== HERO SECTION ===== */
         .hero-section {
             position: relative;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 245, 245, 0.85) 45%, rgba(255, 255, 255, 0.9) 100%);
+            background: url('images-landing/Exam\ Preparation.png');
+            background-size: cover;
+            background-position: center;
             padding: 20px 0;
             min-height: 80vh;
             display: flex;
@@ -70,28 +72,22 @@
             overflow: hidden;
         }
 
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            width: 420px;
-            height: 420px;
-            top: -80px;
-            right: -140px;
-            background: radial-gradient(circle at 30% 30%, rgba(0, 168, 204, 0.18), transparent 55%);
-            border-radius: 50%;
-            z-index: 1;
-        }
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 20px 0;
+                background-position: right;
+            }
 
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            width: 360px;
-            height: 360px;
-            bottom: -140px;
-            left: -120px;
-            background: radial-gradient(circle at 40% 40%, rgba(255, 196, 0, 0.14), transparent 65%);
-            border-radius: 50%;
-            z-index: 1;
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(245, 245, 245, 0.8);
+                z-index: 1;
+            }
         }
 
         .hero-content,
@@ -1106,9 +1102,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="hero-image">
+                    <!-- <div class="hero-image">
                         <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=400&fit=crop" alt="Student learning">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
